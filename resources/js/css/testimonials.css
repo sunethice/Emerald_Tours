@@ -1,0 +1,16 @@
+.testimonial-card-rounded{
+    border-radius: 16px 0 16px 0;
+}
+
+.testimonial-card-body{
+    background-color: #f9f9f9;
+    height: 100%;
+}
+
+.testimonial-img-wrapper{
+    border-radius: 16px 16px 16px 0px;
+}
+
+.testimonial-img{
+    border-radius: 16px 16px 16px 0px;
+}
