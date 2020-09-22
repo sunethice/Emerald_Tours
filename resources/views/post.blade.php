@@ -81,9 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <?= htmlspecialchars($name, ENT_QUOTES); ?>
-                    <br><br>
-                    <div>{{ $name }}</div>
+                    {{ $post->body }}
                 </div>
 
                 <div class="links">

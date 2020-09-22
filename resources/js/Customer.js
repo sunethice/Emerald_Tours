@@ -6,6 +6,7 @@ import Aboutus from './components/ClientView/AboutUs';
 import Package from './components/ClientView/Package';
 import Gallery from './components/ClientView/Gallery';
 import Bespoke from './components/ClientView/Bespoke';
+import Excursions from './components/ClientView/Excursions';
 import OurTeam from './components/ClientView/OurTeam';
 import Testimonials from './components/ClientView/Testimonials';
 
@@ -20,6 +21,7 @@ function Customer() {
         <Gallery></Gallery>
         <Package></Package>
         <Bespoke></Bespoke>
+        <Excursions></Excursions>
         <Testimonials></Testimonials>
         <OurTeam></OurTeam>
         <Footer></Footer>

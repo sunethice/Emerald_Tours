@@ -1,3 +1,11 @@
+.testimonial-wrapper{
+    margin-bottom: 80px !important;
+    background-image: url("../img/middel-banner.png") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
 .testimonial-card-rounded{
     border-radius: 16px 0 16px 0;
 }
@@ -9,8 +17,23 @@
 
 .testimonial-img-wrapper{
     border-radius: 16px 16px 16px 0px;
+    max-width: 40% !important;
+}
+
+.testimonial-content-wrapper{
+    max-width: 60% !important;
 }
 
 .testimonial-img{
     border-radius: 16px 16px 16px 0px;
+}
+
+.testimonial-user{
+    float:left;
+    clear: both;
+}
+
+.testimonial-user-desig{
+    float:left;
+    clear: both;
 }
