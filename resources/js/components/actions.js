@@ -1,6 +1,16 @@
-import { CREATE_TODO } from './actionTypes';
+import axios from 'axios';
+import { LIST_PACKAGES, LIST_PACKAGES_FAILURE } from './actionTypes';
 
-export const createTodo = (text) => ({
-    type: CREATE_TODO,
-    payload: { text }
-});
+export function listPackages () {
+    return (dispatch) => {
+        axios.get('/api/packages')
+          .then((res) =>{
+              dispatch({type: LIST_PACKAGES ,payload:res.data});
+          })
+          .catch((error)=> {
+              dispatch({type: LIST_PACKAGES_FAILURE, payload: error});
+          })
+    }
+}
+
+

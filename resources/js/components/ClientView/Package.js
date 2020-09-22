@@ -1,22 +1,14 @@
-import React,{ Component } from "react";
+import React,{ Component, useState } from "react";
 import { connect } from 'react-redux';
-import { createTodo } from '../actions';
+import { listPackages } from '../actions';
 import pkg1 from '../../img/tour-package1.jpg';
 import pkg2 from '../../img/tour-package1.jpg';
 
-// import "owl.carousel/dist/assets/owl.carousel.css";
-// import "owl.carousel/dist/assets/owl.theme.default.css";
-// import './owl.css';
-
-// const options = {
-//   items: 1,
-//   nav: true,
-//   rewind: true,
-//   autoplay: true
-// };
-
 class Package extends Component {
-    // packages = new Array();
+
+    componentDidMount(){
+        this.props.fetchData();
+    }
 
     render()
         {
@@ -167,20 +159,18 @@ class Package extends Component {
               </div>
           );
         }
-
-    async onButtonClick(){
-        let res = await axios.get('/api/packages');
-        let projects = res.data;
-        // console.log(`res ${JSON.stringify(res)}`);
-    }
 }
 
 const mapStateToProps = (state) => ({
-    todos : state.todos
+    packages : state.packages
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    onCreatePressed: text => dispatch(createTodo(text))
+    fetchData: () => dispatch(listPackages())
 });
 
-export default connect(mapStateToProps,mapDispatchToProps)(Package);
+// const mapDispatchToProps = (dispatch) => ({
+//     onCreatePressed: () => dispatch(displayAlert())
+// });
+
+export default connect(mapStateToProps, mapDispatchToProps )(Package);
