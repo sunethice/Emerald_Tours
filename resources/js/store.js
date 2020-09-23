@@ -22,13 +22,14 @@ const rootReducer = combineReducers(reducers);/*this puts reducers in a form tha
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 //persistConfig is an object that tells the persistReducer how to save and where to store our application data
 
+
 export const configureStore = () =>
     createStore(
         persistedReducer,
         {},
-        // composeWithDevTools(
+        composeWithDevTools(
             applyMiddleware(thunk)
-        // )
+        )
     );
 
 

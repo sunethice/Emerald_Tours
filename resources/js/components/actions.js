@@ -12,5 +12,16 @@ export function listPackages () {
           })
     }
 }
+// export function listPackages() {
+//     return function(dispatch) {
+//         return  axios.get('/api/packages')
+//         .then((res) =>{
+//             dispatch({type: LIST_PACKAGES ,payload:res.data});
+//         })
+//         .catch((error)=> {
+//             dispatch({type: LIST_PACKAGES_FAILURE, payload: error});
+//         })
+//     };
+// }
 
 
