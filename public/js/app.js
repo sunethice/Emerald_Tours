@@ -91620,7 +91620,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions */ "./resources/js/components/actions.js");
+/* harmony import */ var _actions_PackageAction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/PackageAction */ "./resources/js/components/actions/PackageAction.js");
 /* harmony import */ var _img_tour_package1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../img/tour-package1.jpg */ "./resources/js/img/tour-package1.jpg");
 /* harmony import */ var _img_tour_package1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_tour_package1_jpg__WEBPACK_IMPORTED_MODULE_3__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -91670,6 +91670,8 @@ var Package = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      var _this = this;
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container mt-5"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -91687,38 +91689,52 @@ var Package = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
         className: "btn btn-outline-secondary",
-        "data-rel": "0"
+        "data-rel": "0",
+        onClick: function onClick() {
+          _this.props.onCreatePressed();
+        }
       }, "Sri Lanka"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "button",
         className: "btn btn-outline-secondary",
-        "data-rel": "1"
+        "data-rel": "1",
+        onClick: function onClick() {
+          _this.onPressed();
+        }
       }, "Maldives")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "row"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-4"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "travel-place"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "work-image"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: _img_tour_package1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
-        className: "img-fluid person",
-        alt: "destination"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "overlay"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "overlay_shape"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "#",
-        className: "over-btn"
-      }, "10 photos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "tourpackage.html",
-        className: "view-all"
-      }, "View All Places", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-long-arrow-alt-right"
-      }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "travel-text"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Love City, Paris, Italy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "for 7Days ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), " $ 710.00")))))));
+      }, this.props.packages.map(function (item) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "col-md-4",
+          key: item.package_id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "travel-place"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "work-image"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _img_tour_package1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+          className: "img-fluid person",
+          alt: "destination"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "overlay"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "overlay_shape"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "#",
+          className: "over-btn"
+        }, "10 photos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "tourpackage.html",
+          className: "view-all"
+        }, "View All Places", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: "fas fa-long-arrow-alt-right"
+        }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "travel-text"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, item.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "for ", item.no_of_days, "Days ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), " $ ", item.no_of_nights))));
+      }))));
+    }
+  }, {
+    key: "onPressed",
+    value: function onPressed() {
+      console.log("prop=>" + JSON.stringify(this.props.packages));
     }
   }]);
 
@@ -91726,15 +91742,21 @@ var Package = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 var mapStateToProps = function mapStateToProps(state) {
+  var PackageReducer = state.PackageReducer;
+  var packages = PackageReducer.packages;
+  console.log("packages>" + JSON.stringify(packages));
   return {
-    packages: state.packages
+    packages: packages
   };
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
     fetchData: function fetchData() {
-      return dispatch(Object(_actions__WEBPACK_IMPORTED_MODULE_2__["listPackages"])());
+      return dispatch(Object(_actions_PackageAction__WEBPACK_IMPORTED_MODULE_2__["listPackages"])());
+    },
+    onCreatePressed: function onCreatePressed() {
+      return dispatch(Object(_actions_PackageAction__WEBPACK_IMPORTED_MODULE_2__["displayAlert"])());
     }
   };
 }; // const mapDispatchToProps = (dispatch) => ({
@@ -91989,10 +92011,50 @@ var Testimonials = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/actionTypes.js":
-/*!************************************************!*\
-  !*** ./resources/js/components/actionTypes.js ***!
-  \************************************************/
+/***/ "./resources/js/components/actions/PackageAction.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/actions/PackageAction.js ***!
+  \**********************************************************/
+/*! exports provided: listPackages, displayAlert */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listPackages", function() { return listPackages; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "displayAlert", function() { return displayAlert; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _actionTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actionTypes */ "./resources/js/components/actions/actionTypes.js");
+
+
+function listPackages() {
+  return function (dispatch) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/packages').then(function (res) {
+      dispatch({
+        type: _actionTypes__WEBPACK_IMPORTED_MODULE_1__["LIST_PACKAGES"],
+        payload: res.data
+      });
+    })["catch"](function (error) {
+      dispatch({
+        type: _actionTypes__WEBPACK_IMPORTED_MODULE_1__["LIST_PACKAGES_FAILURE"],
+        payload: error
+      });
+    });
+  };
+}
+function displayAlert() {
+  return {
+    type: _actionTypes__WEBPACK_IMPORTED_MODULE_1__["LIST_PACKAGES_FAILURE"],
+    payload: "u"
+  };
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/actions/actionTypes.js":
+/*!********************************************************!*\
+  !*** ./resources/js/components/actions/actionTypes.js ***!
+  \********************************************************/
 /*! exports provided: LIST_PACKAGES, LIST_PACKAGES_FAILURE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -92005,83 +92067,65 @@ var LIST_PACKAGES_FAILURE = 'LIST_PACKAGES_FAILURE';
 
 /***/ }),
 
-/***/ "./resources/js/components/actions.js":
-/*!********************************************!*\
-  !*** ./resources/js/components/actions.js ***!
-  \********************************************/
-/*! exports provided: listPackages */
+/***/ "./resources/js/components/reducers/PackageReducer.js":
+/*!************************************************************!*\
+  !*** ./resources/js/components/reducers/PackageReducer.js ***!
+  \************************************************************/
+/*! exports provided: PackageReducer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listPackages", function() { return listPackages; });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _actionTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actionTypes */ "./resources/js/components/actionTypes.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PackageReducer", function() { return PackageReducer; });
+/* harmony import */ var _actions_actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/actionTypes */ "./resources/js/components/actions/actionTypes.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-function listPackages() {
-  return function (dispatch) {
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/packages').then(function (res) {
-      console.log(JSON.stringify(res.data));
-      dispatch({
-        type: _actionTypes__WEBPACK_IMPORTED_MODULE_1__["LIST_PACKAGES"],
-        payload: res.data
-      });
-    })["catch"](function (error) {
-      dispatch({
-        type: _actionTypes__WEBPACK_IMPORTED_MODULE_1__["LIST_PACKAGES_FAILURE"],
-        payload: error
-      });
-    });
-  };
-} // export function listPackages() {
-//     return function(dispatch) {
-//         return  axios.get('/api/packages')
-//         .then((res) =>{
-//             dispatch({type: LIST_PACKAGES ,payload:res.data});
-//         })
-//         .catch((error)=> {
-//             dispatch({type: LIST_PACKAGES_FAILURE, payload: error});
-//         })
-//     };
-// }
-
-/***/ }),
-
-/***/ "./resources/js/components/reducers.js":
-/*!*********************************************!*\
-  !*** ./resources/js/components/reducers.js ***!
-  \*********************************************/
-/*! exports provided: packages */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "packages", function() { return packages; });
-/* harmony import */ var _actionTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actionTypes */ "./resources/js/components/actionTypes.js");
-
-var packages = function packages() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+var PackageReducer = function PackageReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
   var action = arguments.length > 1 ? arguments[1] : undefined;
   var type = action.type,
       payload = action.payload;
 
   switch (type) {
-    case _actionTypes__WEBPACK_IMPORTED_MODULE_0__["LIST_PACKAGES"]:
-      // console.log(JSON.stringify(payload));
-      // const { text } = payload;
-      var newPkgList = {
+    case _actions_actionTypes__WEBPACK_IMPORTED_MODULE_0__["LIST_PACKAGES"]:
+      // const packages = {
+      //     payload
+      // };
+      // return state.concat(newPkgList);
+      return _objectSpread(_objectSpread({}, state), {}, {
         packages: payload
-      };
-      return state.concat(newPkgList);
+      });
 
-    case _actionTypes__WEBPACK_IMPORTED_MODULE_0__["LIST_PACKAGES_FAILURE"]:
+    case _actions_actionTypes__WEBPACK_IMPORTED_MODULE_0__["LIST_PACKAGES_FAILURE"]:
       return state;
 
     default:
       return state;
   }
+};
+
+/***/ }),
+
+/***/ "./resources/js/components/reducers/index.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/reducers/index.js ***!
+  \***************************************************/
+/*! exports provided: reducers */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "reducers", function() { return reducers; });
+/* harmony import */ var _PackageReducer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PackageReducer */ "./resources/js/components/reducers/PackageReducer.js");
+ // this is where we put all the reducers
+
+var reducers = {
+  PackageReducer: _PackageReducer__WEBPACK_IMPORTED_MODULE_0__["PackageReducer"]
 };
 
 /***/ }),
@@ -92319,7 +92363,7 @@ module.exports = "/images/user1_img.jpg?e955c1c7a042a644302b2552aa287b80";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "configureStore", function() { return configureStore; });
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
-/* harmony import */ var _components_reducers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/reducers */ "./resources/js/components/reducers.js");
+/* harmony import */ var _components_reducers_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/reducers/index */ "./resources/js/components/reducers/index.js");
 /* harmony import */ var redux_persist__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-persist */ "./node_modules/redux-persist/es/index.js");
 /* harmony import */ var redux_persist_lib_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-persist/lib/storage */ "./node_modules/redux-persist/lib/storage/index.js");
 /* harmony import */ var redux_persist_lib_storage__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_persist_lib_storage__WEBPACK_IMPORTED_MODULE_3__);
@@ -92335,10 +92379,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var reducers = {
-  packages: _components_reducers__WEBPACK_IMPORTED_MODULE_1__["packages"]
-}; // this is where we put all the reducers
-
 var persistConfig = {
   key: 'root',
   storage: redux_persist_lib_storage__WEBPACK_IMPORTED_MODULE_3___default.a,
@@ -92348,7 +92388,7 @@ var persistConfig = {
 
 }; //combinedReducer is used to create rootReducer
 
-var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(reducers);
+var rootReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])(_components_reducers_index__WEBPACK_IMPORTED_MODULE_1__["reducers"]);
 /*this puts reducers in a form that can be passed to the
 create store function*/
 

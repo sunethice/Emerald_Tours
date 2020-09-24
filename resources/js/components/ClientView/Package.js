@@ -1,6 +1,6 @@
 import React,{ Component, useState } from "react";
 import { connect } from 'react-redux';
-import { listPackages } from '../actions';
+import { listPackages, displayAlert } from '../actions/PackageAction';
 import pkg1 from '../../img/tour-package1.jpg';
 import pkg2 from '../../img/tour-package1.jpg';
 
@@ -44,6 +44,7 @@ class Package extends Component {
                                       type="button"
                                       className="btn btn-outline-secondary"
                                       data-rel="0"
+                                      onClick={() => {this.props.onCreatePressed()}}
                                   >
                                       Sri Lanka
                                   </button>
@@ -51,6 +52,7 @@ class Package extends Component {
                                       type="button"
                                       className="btn btn-outline-secondary"
                                       data-rel="1"
+                                      onClick={() => {this.onPressed()}}
                                   >
                                       Maldives
                                   </button>
@@ -58,115 +60,62 @@ class Package extends Component {
                           </div>
                       </div>
                       <div className="row">
-                          {/* {this.packages.map(package =>{
-
-                          })} */}
-                          <div className="col-md-4">
-                              <div className="travel-place">
-                                  <div className="work-image">
-                                      <img
-                                          src={pkg1}
-                                          className="img-fluid person"
-                                          alt="destination"
-                                      />
-                                      <div className="overlay">
-                                          <div className="overlay_shape">
-                                              <a href="#" className="over-btn">
-                                                  10 photos
-                                              </a>
-                                              <a
-                                                  href="tourpackage.html"
-                                                  className="view-all"
-                                              >
-                                                  View All Places
-                                                  <i className="fas fa-long-arrow-alt-right"></i>
-                                              </a>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="travel-text">
-                                      <h3>Love City, Paris, Italy</h3>
-                                      <p>
-                                          for 7Days <span>|</span> $ 710.00
-                                      </p>
-                                  </div>
-                              </div>
-                          </div>
-                          {/* <div className="col-md-4">
-                              <div className="travel-place">
-                                  <div className="work-image">
-                                      <img
-                                          src={pkg2}
-                                          className="img-fluid person"
-                                          alt="destination"
-                                      />
-                                      <div className="overlay">
-                                          <div className="overlay_shape">
-                                              <a href="#" className="over-btn">
-                                                  10 photos
-                                              </a>
-                                              <a
-                                                  href="tourpackage.html"
-                                                  className="view-all"
-                                              >
-                                                  View All Places
-                                                  <i className="fas fa-long-arrow-alt-right"></i>
-                                              </a>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="travel-text">
-                                      <h3>Love City, Paris, Italy</h3>
-                                      <p>
-                                          for 7Days <span>|</span> $ 710.00
-                                      </p>
-                                  </div>
-                              </div>
-                          </div>
-                          <div className="col-md-4">
-                              <div className="travel-place">
-                                  <div className="work-image">
-                                      <img
-                                          src={pkg1}
-                                          className="img-fluid person"
-                                          alt="destination"
-                                      />
-                                      <div className="overlay">
-                                          <div className="overlay_shape">
-                                              <a href="#" className="over-btn">
-                                                  10 photos
-                                              </a>
-                                              <a
-                                                  href="tourpackage.html"
-                                                  className="view-all"
-                                              >
-                                                  View All Places
-                                                  <i className="fas fa-long-arrow-alt-right"></i>
-                                              </a>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div className="travel-text">
-                                      <h3>Love City, Paris, Italy</h3>
-                                      <p>
-                                          for 7Days <span>|</span> $ 710.00
-                                      </p>
-                                  </div>
-                              </div>
-                          </div> */}
+                        {
+                            this.props.packages.map((item) => (
+                                <div className="col-md-4" key={item.package_id}>
+                                    <div className="travel-place">
+                                        <div className="work-image">
+                                            <img
+                                                src={pkg1}
+                                                className="img-fluid person"
+                                                alt="destination"
+                                            />
+                                            <div className="overlay">
+                                                <div className="overlay_shape">
+                                                    <a href="#" className="over-btn">
+                                                        10 photos
+                                                    </a>
+                                                    <a
+                                                        href="tourpackage.html"
+                                                        className="view-all"
+                                                    >
+                                                        View All Places
+                                                        <i className="fas fa-long-arrow-alt-right"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="travel-text">
+                                            <h3>{ item.name }</h3>
+                                            <p>
+                                                for {item.no_of_days}Days <span>|</span> $ { item.no_of_nights }
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
                       </div>
                   </div>
               </div>
           );
         }
+
+        onPressed(){
+            console.log("prop=>" + JSON.stringify(this.props.packages));
+        }
 }
 
-const mapStateToProps = (state) => ({
-    packages : state.packages
-});
+const mapStateToProps = (state) => {
+    const { PackageReducer } = state;
+    const { packages } = PackageReducer;
+    console.log("packages>"+ JSON.stringify(packages));
+    return { packages };
+};
 
 const mapDispatchToProps = (dispatch) => ({
-    fetchData: () => dispatch(listPackages())
+    fetchData: () => dispatch(listPackages()),
+    onCreatePressed: () => dispatch(displayAlert())
 });
 
 // const mapDispatchToProps = (dispatch) => ({

@@ -5,7 +5,6 @@ export function listPackages () {
     return (dispatch) => {
         axios.get('/api/packages')
           .then((res) =>{
-              console.log(JSON.stringify(res.data));
               dispatch({type: LIST_PACKAGES ,payload:res.data});
           })
           .catch((error)=> {
@@ -13,16 +12,9 @@ export function listPackages () {
           })
     }
 }
-// export function listPackages() {
-//     return function(dispatch) {
-//         return  axios.get('/api/packages')
-//         .then((res) =>{
-//             dispatch({type: LIST_PACKAGES ,payload:res.data});
-//         })
-//         .catch((error)=> {
-//             dispatch({type: LIST_PACKAGES_FAILURE, payload: error});
-//         })
-//     };
-// }
+
+export function displayAlert(){
+    return {type: LIST_PACKAGES_FAILURE, payload: "u"};
+}
 
 
