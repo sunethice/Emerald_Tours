@@ -7,10 +7,10 @@ export const packages = (state = [], action) => {
         case LIST_PACKAGES:
             // console.log(JSON.stringify(payload));
             // const { text } = payload;
-            const newList = {
+            const newPkgList = {
                 packages: payload
             };
-            return state.concat(newList);
+            return state.concat(newPkgList);
         case LIST_PACKAGES_FAILURE:
             return state;
         default:

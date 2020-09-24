@@ -5,6 +5,7 @@ export function listPackages () {
     return (dispatch) => {
         axios.get('/api/packages')
           .then((res) =>{
+              console.log(JSON.stringify(res.data));
               dispatch({type: LIST_PACKAGES ,payload:res.data});
           })
           .catch((error)=> {
