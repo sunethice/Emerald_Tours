@@ -102,7 +102,6 @@ class Package extends Component {
         }
 
         onPressed(){
-            console.log("prop=>" + JSON.stringify(this.props.packages));
         }
 }
 
