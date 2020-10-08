@@ -91609,9 +91609,154 @@ var OurTeam = /*#__PURE__*/function (_Component) {
   !*** ./resources/js/components/ClientView/Package.js ***!
   \*******************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/resources/js/components/ClientView/Package.js: Unexpected token (105:1)\n\n\u001b[0m \u001b[90m 103 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 104 | \u001b[39m        onPressed(){\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 105 | \u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<<\u001b[39m\u001b[33m<\u001b[39m \u001b[33mHEAD\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m     | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 106 | \u001b[39m\u001b[33m===\u001b[39m\u001b[33m===\u001b[39m\u001b[33m=\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 107 | \u001b[39m        }\u001b[0m\n\u001b[0m \u001b[90m 108 | \u001b[39m\u001b[0m\n    at Object._raise (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:766:17)\n    at Object.raiseWithData (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:759:17)\n    at Object.raise (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:753:17)\n    at Object.unexpected (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:8966:16)\n    at Object.jsxParseIdentifier (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:4492:12)\n    at Object.jsxParseNamespacedName (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:4502:23)\n    at Object.jsxParseElementName (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:4513:21)\n    at Object.jsxParseOpeningElementAt (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:4599:22)\n    at Object.jsxParseElementAt (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:4632:33)\n    at Object.jsxParseElement (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:4706:17)\n    at Object.parseExprAtom (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:4713:19)\n    at Object.parseExprSubscripts (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:9844:23)\n    at Object.parseUpdate (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:9824:21)\n    at Object.parseMaybeUnary (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:9813:17)\n    at Object.parseExprOps (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:9683:23)\n    at Object.parseMaybeConditional (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:9657:23)\n    at Object.parseMaybeAssign (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:9620:21)\n    at Object.parseExpressionBase (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:9564:23)\n    at /Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:9558:39\n    at Object.allowInAnd (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:11297:16)\n    at Object.parseExpression (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:9558:17)\n    at Object.parseStatementContent (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:11562:23)\n    at Object.parseStatement (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:11431:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:12013:25)\n    at Object.parseBlockBody (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:11999:10)\n    at Object.parseBlock (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:11983:10)\n    at Object.parseFunctionBody (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:10963:24)\n    at Object.parseFunctionBodyAndFinish (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:10946:10)\n    at Object.parseMethod (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:10883:10)\n    at Object.pushClassMethod (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:12430:30)\n    at Object.parseClassMemberWithIsStatic (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:12347:12)\n    at Object.parseClassMember (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:12289:10)\n    at /Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:12241:14\n    at Object.withTopicForbiddingContext (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:11272:14)\n    at Object.parseClassBody (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:12218:10)\n    at Object.parseClass (/Users/sunethperera/Documents/Career/EmTours/Emerald_Tours/node_modules/@babel/parser/lib/index.js:12193:22)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _actions_PackageAction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../actions/PackageAction */ "./resources/js/components/actions/PackageAction.js");
+/* harmony import */ var _img_tour_package1_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../img/tour-package1.jpg */ "./resources/js/img/tour-package1.jpg");
+/* harmony import */ var _img_tour_package1_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_img_tour_package1_jpg__WEBPACK_IMPORTED_MODULE_3__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+
+
+
+var Package = /*#__PURE__*/function (_Component) {
+  _inherits(Package, _Component);
+
+  var _super = _createSuper(Package);
+
+  function Package() {
+    _classCallCheck(this, Package);
+
+    return _super.apply(this, arguments);
+  }
+
+  _createClass(Package, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.fetchData();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this = this;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container mt-5"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-12"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "h3 text-center"
+      }, "Tour Packages"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Lorem ipsum dolor sit amet, curabitur nec lacus pellentesque ut facilisis, lacus iaculis turpis interdum pede, sapien quis amet vitae, erat parturient, turpis congue sit. Hac nulla phasellus ornare. Volutpat risus ipsum nulla ducimus erat. Scelerisque eu imperdiet wisi wisi, sit libero sed ipsum sodales phasellus, odio vel ac non ac, sodales viverra, metus volutpat quis rutrum diam ac integer. Posuere nullam eu vestibulum non nonummy. Metus purus ac malesuada vitae ut qui, sed rhoncus nonummy, massa ac urna risus, faucibus aliquam malesuada fusce gravida urna."))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-12 d-flex justify-content-center mb-5"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "btn-group"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-outline-secondary",
+        "data-rel": "0",
+        onClick: function onClick() {
+          _this.props.onCreatePressed();
+        }
+      }, "Sri Lanka"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "button",
+        className: "btn btn-outline-secondary",
+        "data-rel": "1",
+        onClick: function onClick() {
+          _this.onPressed();
+        }
+      }, "Maldives")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row"
+      }, this.props.packages ? this.renderPackages() : "")));
+    }
+  }, {
+    key: "renderPackages",
+    value: function renderPackages() {
+      return this.props.packages.map(function (item) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "col-md-4",
+          key: item.package_id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "travel-place"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "work-image"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          src: _img_tour_package1_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+          className: "img-fluid person",
+          alt: "destination"
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "overlay"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "overlay_shape"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "#",
+          className: "over-btn"
+        }, "10 photos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "tourpackage.html",
+          className: "view-all"
+        }, "View All Places", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+          className: "fas fa-long-arrow-alt-right"
+        }))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "travel-text"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, item.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "for ", item.no_of_days, "Days ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "|"), " $ ", item.no_of_nights))));
+      });
+    }
+  }]);
+
+  return Package;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+var mapStateToProps = function mapStateToProps(state) {
+  var PackageReducer = state.PackageReducer;
+  var packages = PackageReducer.packages;
+  return {
+    packages: packages
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    fetchData: function fetchData() {
+      return dispatch(Object(_actions_PackageAction__WEBPACK_IMPORTED_MODULE_2__["listPackages"])());
+    }
+  };
+}; // const mapDispatchToProps = (dispatch) => ({
+//     onCreatePressed: () => dispatch(displayAlert())
+// });
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(Package));
 
 /***/ }),
 
@@ -91855,6 +92000,46 @@ var Testimonials = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (Testimonials);
+
+/***/ }),
+
+/***/ "./resources/js/components/actions/PackageAction.js":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/actions/PackageAction.js ***!
+  \**********************************************************/
+/*! exports provided: listPackages, displayAlert */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "listPackages", function() { return listPackages; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "displayAlert", function() { return displayAlert; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _actionTypes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./actionTypes */ "./resources/js/components/actions/actionTypes.js");
+
+
+function listPackages() {
+  return function (dispatch) {
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('/api/packages').then(function (res) {
+      dispatch({
+        type: _actionTypes__WEBPACK_IMPORTED_MODULE_1__["LIST_PACKAGES"],
+        payload: res.data
+      });
+    })["catch"](function (error) {
+      dispatch({
+        type: _actionTypes__WEBPACK_IMPORTED_MODULE_1__["LIST_PACKAGES_FAILURE"],
+        payload: error
+      });
+    });
+  };
+}
+function displayAlert() {
+  return {
+    type: _actionTypes__WEBPACK_IMPORTED_MODULE_1__["LIST_PACKAGES_FAILURE"],
+    payload: "u"
+  };
+}
 
 /***/ }),
 
@@ -92134,6 +92319,17 @@ module.exports = "/images/logo1.png?9738ac712bf7a52c46edbb02e7050ce3";
 /***/ (function(module, exports) {
 
 module.exports = "/images/middel-banner.png?b44a0bdfc33367335bb8bd9a5da0588e";
+
+/***/ }),
+
+/***/ "./resources/js/img/tour-package1.jpg":
+/*!********************************************!*\
+  !*** ./resources/js/img/tour-package1.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/tour-package1.jpg?2b609fe435cc2fa7c88b6d2eb30d2c9f";
 
 /***/ }),
 

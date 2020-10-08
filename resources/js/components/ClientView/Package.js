@@ -61,47 +61,12 @@ class Package extends Component {
                       </div>
                       <div className="row">
                         {
-                            this.props.packages.map((item) => (
-                                <div className="col-md-4" key={item.package_id}>
-                                    <div className="travel-place">
-                                        <div className="work-image">
-                                            <img
-                                                src={pkg1}
-                                                className="img-fluid person"
-                                                alt="destination"
-                                            />
-                                            <div className="overlay">
-                                                <div className="overlay_shape">
-                                                    <a href="#" className="over-btn">
-                                                        10 photos
-                                                    </a>
-                                                    <a
-                                                        href="tourpackage.html"
-                                                        className="view-all"
-                                                    >
-                                                        View All Places
-                                                        <i className="fas fa-long-arrow-alt-right"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="travel-text">
-                                            <h3>{ item.name }</h3>
-                                            <p>
-                                                for {item.no_of_days}Days <span>|</span> $ { item.no_of_nights }
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))
+                            this.props.packages?this.renderPackages():""
                         }
                       </div>
                   </div>
               </div>
           );
-        }
-
-        onPressed(){
         }
 
         renderPackages(){
@@ -148,8 +113,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    fetchData: () => dispatch(listPackages()),
-    onCreatePressed: () => dispatch(displayAlert())
+    fetchData: () => dispatch(listPackages())
 });
 
 // const mapDispatchToProps = (dispatch) => ({
