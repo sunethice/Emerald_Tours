@@ -44,16 +44,14 @@ class Package extends Component {
                                       type="button"
                                       className="btn btn-outline-secondary"
                                       data-rel="0"
-                                      onClick={() => {this.props.onCreatePressed()}}
-                                  >
+                                      onClick={() => {this.props.onCreatePressed()}}>
                                       Sri Lanka
                                   </button>
                                   <button
                                       type="button"
                                       className="btn btn-outline-secondary"
                                       data-rel="1"
-                                      onClick={() => {this.onPressed()}}
-                                  >
+                                      onClick={() => {this.onPressed()}}>
                                       Maldives
                                   </button>
                               </div>
@@ -84,10 +82,7 @@ class Package extends Component {
                                     <a href="#" className="over-btn">
                                         10 photos
                                     </a>
-                                    <a
-                                        href="tourpackage.html"
-                                        className="view-all"
-                                    >
+                                    <a href="tourpackage.html" className="view-all">
                                         View All Places
                                         <i className="fas fa-long-arrow-alt-right"></i>
                                     </a>
