@@ -12,7 +12,7 @@ class Package extends Model
     // protected $fillable = ['name','no_of_days','no_of_nights','featured'];
     protected $table = "packages";
 
-    public function category(){
+    public function packageCategory(){
         return $this->belongsTo('App\PackageCategory');
     }
 }

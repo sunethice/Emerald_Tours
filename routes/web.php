@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/test', function(){
     return "test page";
 });
-Route::view('/{path?}', 'app'); //redirects all first level url paths in the browser to app view
+Route::view('/{path?}/{path1?}', 'app'); //redirects all first level url paths in the browser to app view
 
 //-----------------Routing--------------------------
 Route::get('test',function(){

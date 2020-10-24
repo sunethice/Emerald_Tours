@@ -2,8 +2,9 @@ import React, { Component } from  'react';
 import logo from '../../img/logo1.png';
 import navIcon from '../../img/hamburger.svg';
 import {Navbar, Nav} from 'react-bootstrap';
+import { Link, animateScroll as scroll } from "react-scroll";
 // import ReactFlagsSelect from 'react-flags-select';
- 
+
 //import css module
 // import 'react-flags-select/css/react-flags-select.css';
 
@@ -33,8 +34,21 @@ class Header extends Component{
                 <Navbar.Collapse className="order-1 order-lg-0" id="basic-navbar-nav">
                     <Nav className="mr-auto">
                         <Nav.Link className="px-3 text-white" href="#Packages">Home</Nav.Link>
-                        <Nav.Link className="px-3 text-white" href="#Packages">Packages</Nav.Link>
-                        <Nav.Link className="px-3 text-white" href="#Gallery">Gallery</Nav.Link>
+                        <Nav.Link as={Link} className="px-3 text-white" href=""
+                                to="package_wrap"
+                                smooth="true"
+                                offset={-70}
+                                duration={500}
+                            >
+                            Packages
+                        </Nav.Link>
+                        <Nav.Link as={Link} className="px-3 text-white" href="#"
+                                to="gallery_wrap"
+                                smooth="true"
+                                duration={1000}
+                            >
+                            Gallery
+                        </Nav.Link>
                         <Nav.Link className="px-3 text-white" href="#Excursions">Excursions</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
@@ -50,7 +64,7 @@ class Header extends Component{
                         <Nav.Link className="btn inquire-btn px-3 text-black text-nowrap">Inquire Now</Nav.Link>
                         {/* <Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic"> */}
-                                
+
                             {/* </Dropdown.Toggle> */}
 
                             {/* <Dropdown.Menu>

@@ -10,6 +10,12 @@ class PackagesController extends Controller
     //
     public function index(){
         $packages = Package::where('featured', true)->get();
+
+        //$packages = Package::get();//with('PackageCategory')->
+
+        // foreach ($packages as $package) {
+        //     echo $package->PackageCategory->name;
+        // }
         return $packages->toJson();
     }
 

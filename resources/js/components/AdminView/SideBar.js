@@ -1,66 +1,50 @@
 import React, { Component } from 'react';
-import {Button, Collapse} from 'react-bootstrap';
-
 import './SideBar.css';
 import TR01 from '../../img/TR01.jpg';
+import { Link } from "react-router-dom";
 
 class SideBar extends Component{
-    
-    constructor(props, context) {
-		super(props, context);
-
-		this.state = {
-			open: false,
-		};
-    }
-    
-    render(){
-        const { open } = this.state;
-        
+    render() {
         return (
             <nav id="sidebar">
                 <div className="pt-5 pb-3">
-                    <img className="sidebar-img rounded-circle d-flex mx-auto" src={TR01} href="#d"></img>    
+                    <img className="sidebar-img rounded-circle d-flex mx-auto" src={TR01} href="#d"></img>
                     <h3 className="text-center py-3">Seneth De Silva</h3>
                 </div>
 
                 <ul className="list-unstyled">
-                    <li>
-                        <a className="p-3" href="#sws">
-                            <span className="fa fa-gift mr-3"></span>
-                            Dashboard
-                        </a>
+                    <li className="px-3" >
+                        <Link to="/admin/dashboard">Dashboard</Link>
                     </li>
-                    <li className="">
-                        <a className="dropdown-toggle menu-collapse p-3" onClick={() => this.setState({ open: !open })} aria-controls="pageSubmenu" aria-expanded={open}>Home</a>
+                    <li className="px-3">
+                        <a className="dropdown-toggle menu-collapse p-3"  aria-controls="pageSubmenu" aria-expanded={open}>Home</a>
 
-                        <Collapse in={open}>
+                        {/* <Collapse in={open}> */}
                             <ul id="pageSubmenu" className="list-unstyled">
                                 <li>
-                                    <a href="#dd">About us</a>
+                                    <Link to="/admin/dashboard">About us</Link>
                                 </li>
                                 <li>
-                                    <a href="#ww">Gallery</a>
+                                    <Link to="/admin/dashboard">Gallery</Link>
                                 </li>
                                 <li>
-                                    <a href="#ww">Packages</a>
+                                    <Link to="/admin/packages">Packages</Link>
                                 </li>
                                 <li>
-                                    <a href="#ww">Our Team</a>
+                                    <Link to="/admin/dashboard">Our Team</Link>
                                 </li>
                             </ul>
-                        </Collapse>
+                        {/* </Collapse> */}
                     </li>
-                    <li>
-                        <a className="p-3" href="#w">Portfolio</a>
+                    <li className="px-3">
+                        <a className="" href="#w">Portfolio</a>
                     </li>
-                    <li>
-                        <a className="p-3" href="#">Contact</a>
+                    <li className="px-3">
+                        <a className="" href="#">Contact</a>
                     </li>
                 </ul>
             </nav>
         );
     }
 }
-
 export default SideBar;

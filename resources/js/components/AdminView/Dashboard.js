@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Gallery extends Component{
+class Dashboard extends Component{
 
     render(){
         return (
@@ -49,4 +49,4 @@ class Gallery extends Component{
     }
 }
 
-export default Gallery;
+export default Dashboard;

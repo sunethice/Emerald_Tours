@@ -13,7 +13,7 @@ class Package extends Component {
     render()
         {
           return (
-              <div>
+            <div id="package_wrap">
                   <div className="container mt-5">
                       <div className="row">
                           <div className="col-12">
