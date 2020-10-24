@@ -17,7 +17,7 @@ class Package extends Component {
                         <tr className="table-secondary">
                             <td>Package ID</td>
                             <td>Package Name</td>
-                            <td>category id</td>
+                            <td>category(id)</td>
                             <td>featured</td>
                             <td>No Days</td>
                             <td>No of Nights</td>
@@ -39,7 +39,7 @@ class Package extends Component {
                 <tr key={item.package_id}>
                     <td>{item.package_id}</td>
                     <td>{item.name}</td>
-                    <td>{item.category_id}</td>
+                    <td>{`${item.category_name}(${item.category_id})`}</td>
                     <td>{item.featured}</td>
                     <td>{item.no_of_days}</td>
                     <td>{item.no_of_nights}</td>

@@ -13,6 +13,6 @@ class Package extends Model
     protected $table = "packages";
 
     public function packageCategory(){
-        return $this->belongsTo('App\PackageCategory');
+        return $this->belongsTo('App\PackageCategory','category_id','category_id');
     }
 }

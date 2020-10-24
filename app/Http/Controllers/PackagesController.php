@@ -9,13 +9,14 @@ class PackagesController extends Controller
 {
     //
     public function index(){
-        $packages = Package::where('featured', true)->get();
+        // $packages = Package::where('featured', true)->get();
 
-        //$packages = Package::get();//with('PackageCategory')->
+        $packages = Package::with('packageCategory')->get();
 
-        // foreach ($packages as $package) {
-        //     echo $package->PackageCategory->name;
-        // }
+        foreach($packages as $key => $value)
+        {
+            $packages[$key]['category_name'] = ($value->packageCategory->name);
+        }
         return $packages->toJson();
     }
 
