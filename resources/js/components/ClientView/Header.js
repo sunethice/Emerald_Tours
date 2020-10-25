@@ -3,30 +3,8 @@ import logo from '../../img/logo1.png';
 import navIcon from '../../img/hamburger.svg';
 import {Navbar, Nav} from 'react-bootstrap';
 import { Link, animateScroll as scroll } from "react-scroll";
-// import ReactFlagsSelect from 'react-flags-select';
-
-//import css module
-// import 'react-flags-select/css/react-flags-select.css';
-
-// import { connect } from 'react-redux';
 
 class Header extends Component{
-    // renderContent(){
-    //     switch(this.props.auth){
-    //         case null:
-    //             return;
-    //         case false:
-    //             return (
-    //                 <li><a href="/auth/google">Login With Google</a></li>
-    //             );
-    //         default:
-    //             return [
-    //                     <li key="1"><Payments></Payments></li>,
-    //                     <li key="2"><a href="/api/logout">logout</a></li>
-    //             ];
-
-    //     }
-    // }
 
     render() {
         return (
@@ -57,32 +35,10 @@ class Header extends Component{
                 </Navbar.Brand>
                 <Navbar.Collapse className="order-3" id="basic-navbar-nav">
                     <Nav className="ml-auto">
-                        {/* <ReactFlagsSelect defaultCountry="US" showSelectedLabel={false}/> */}
                         <Nav.Link className="px-3 text-white" href="#Blog">Blog</Nav.Link>
                         <Nav.Link className="px-3 text-white text-nowrap" href="#Explore">Explore SriLanka</Nav.Link>
-                        <Nav.Link className="px-3 text-white" href="#">SignIn</Nav.Link>
+                        <Nav.Link className="px-3 text-white" href="/admin">Admin</Nav.Link>
                         <Nav.Link className="btn inquire-btn px-3 text-black text-nowrap">Inquire Now</Nav.Link>
-                        {/* <Dropdown>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic"> */}
-
-                            {/* </Dropdown.Toggle> */}
-
-                            {/* <Dropdown.Menu>
-                                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown> */}
-                        {/* <Dropdown>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                Dropdown Button
-                            </Dropdown.Toggle>
-                            <Dropdown.Menu aria-labelledby="dropdown09">
-                                <Dropdown.Item href="#fr"><span className="flag-icon flag-icon-fr"> </span>  French</Dropdown.Item>
-                                <Dropdown.Item href="#it"><span className="flag-icon flag-icon-it"> </span>  Italian</Dropdown.Item>
-                                <Dropdown.Item href="#ru"><span className="flag-icon flag-icon-ru"> </span>  Russian</Dropdown.Item>
-                            </Dropdown.Menu>
-                        </Dropdown> */}
                     </Nav>
                 </Navbar.Collapse>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
