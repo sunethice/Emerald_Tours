@@ -14,7 +14,7 @@ class Testimonials extends Component{
                 <div className="col-12 col-md-6">
                   <div className="row">
                       <div className="col-12 text-dark">
-                          <div className="h3 text-center">Testimonials</div>
+                          <div className="h3 text-center">What travellers say about us</div>
                           <p className="text-center pt-2">Lorem ipsum dolor sit amet, curabitur nec lacus pellentesque ut facilisis,
                               lacus iaculis turpis interdum pede, sapien quis amet vitae, erat parturient,
                               turpis congue sit. Hac nulla phasellus ornare. Volutpat risus ipsum nulla ducimus erat.

@@ -9,6 +9,7 @@ import Bespoke from './components/ClientView/Bespoke';
 import Excursions from './components/ClientView/Excursions';
 import OurTeam from './components/ClientView/OurTeam';
 import Testimonials from './components/ClientView/Testimonials';
+import AirportPickup from './components/ClientView/AirportPickup';
 
 import './css/App.css';
 
@@ -22,6 +23,7 @@ function Customer() {
         <Package></Package>
         <Bespoke></Bespoke>
         <Excursions></Excursions>
+        <AirportPickup></AirportPickup>
         <Testimonials></Testimonials>
         <OurTeam></OurTeam>
         <Footer></Footer>

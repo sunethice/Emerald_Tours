@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../../css/Gallery.css';
 
 class Gallery extends Component{
 

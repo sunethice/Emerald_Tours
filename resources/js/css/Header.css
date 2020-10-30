@@ -1,0 +1,147 @@
+.navbar-bg{
+    background-color: #000;
+}
+
+.navbar-toggler-icon {
+    background-image: url("../img/hamburger.svg");
+}
+
+.inquire-btn {
+    color: #000 !important;
+    background-color: #ffba00;
+    border-color: #ffba00;
+}
+
+.text-white{
+    color: #fff !important;
+}
+
+.AuthModal .modal-dialog{
+    max-width:1000px;
+}
+
+.AuthModal .modal-content {
+    border-radius: 50px;
+    height: 500px;
+    width: 1500px;
+    padding: 0px;
+}
+
+.AuthModal .modal-body {
+    border-radius: 47px;
+    height: 100%;
+    background-color: #333;
+    padding: 0;
+}
+
+.AuthModal .modal-body .container, .AuthModal .modal-body  .row{
+    height:100%;
+}
+
+.ModalHeading{
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.signInColLeft{
+    padding: 95px;
+}
+
+.signInColRight{
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    border-top-right-radius: 47px;
+    border-bottom-right-radius: 47px;
+    padding: 0;
+}
+
+.signinEntry{
+    background-color: transparent;
+    color: #fff;
+}
+
+.signinEntry:focus{
+    background-color: transparent;
+    color: #fff;
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.signUpWrap{
+    color: #fff;
+    font-size: 12px;
+}
+
+.chkKeepSigned{
+    display: inline;
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+}
+
+.forgotPass, .signUp{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+.btn-signin{
+    min-width: 150px;
+}
+
+.horizontalLine{
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    line-height: 11px;
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.horizontalLine:before,
+.horizontalLine:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid #fff;
+    margin: auto;
+}
+
+
+.signInImg{
+    height: 500px;
+    border-top-right-radius: 47px;
+    border-bottom-right-radius: 47px;
+    width: 100%;
+}
+
+.closeBtn{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    right: 20px;
+    top: 20px;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    opacity: 0.6;
+}
+
+.closeBtn:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.closeIcon{
+    width: 12px;
+}
+
+
+

@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { listPackages, displayAlert } from '../actions/PackageAction';
 import pkg1 from '../../img/tour-package1.jpg';
 import pkg2 from '../../img/tour-package1.jpg';
+import '../../css/Package.css';
 
 class Package extends Component {
 
@@ -58,17 +59,23 @@ class Package extends Component {
                           </div>
                       </div>
                       <div className="row">
-                        {
-                            this.props.packages?this.renderPackages():""
-                        }
+                        {this.props.packages?this.renderPackages():""}
+                        {this.props.packages.length>3?
+                            <div className="col-12 d-flex justify-content-center">
+                                <button className="btn btn-more px-3 text-black text-nowrap nav-link">View More</button>
+                            </div>:""}
                       </div>
                   </div>
               </div>
           );
         }
 
+        showImagesModal(packageID){
+            console.log(`showImagesModal - ${packageID}`);
+        }
+
         renderPackages(){
-            return this.props.packages.map((item) => (
+            return this.props.packages.slice(0,3).map((item) => (
                 <div className="col-md-4" key={item.package_id}>
                     <div className="travel-place">
                         <div className="work-image">
@@ -79,9 +86,9 @@ class Package extends Component {
                             />
                             <div className="overlay">
                                 <div className="overlay_shape">
-                                    <a href="#" className="over-btn">
+                                    <button className="over-btn" id={item.package_id + '_imgBtn'} onClick={() => this.showImagesModal(item.package_id)}>
                                         10 photos
-                                    </a>
+                                    </button>
                                     <a href="tourpackage.html" className="view-all">
                                         View All Places
                                         <i className="fas fa-long-arrow-alt-right"></i>
