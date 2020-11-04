@@ -1,6 +1,6 @@
 import React,{ Component, useState } from "react";
 import { connect } from 'react-redux';
-import { listPackages, displayAlert } from '../actions/PackageAction';
+import { listPackages } from '../actions/PackageAction';
 import pkg1 from '../../img/tour-package1.jpg';
 import pkg2 from '../../img/tour-package1.jpg';
 import '../../css/Package.css';
@@ -117,9 +117,5 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => ({
     fetchData: () => dispatch(listPackages())
 });
-
-// const mapDispatchToProps = (dispatch) => ({
-//     onCreatePressed: () => dispatch(displayAlert())
-// });
 
 export default connect(mapStateToProps, mapDispatchToProps )(Package);

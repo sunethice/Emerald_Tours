@@ -7,6 +7,16 @@
     column-width: 33%;  */
   }
 
+  .galleryPicTypeOne{
+    width: 370.667px;
+    max-height: 247.1px;
+  }
+
+  .galleryPicTypeTwo{
+    width: 370.667px;
+    height: 556px;
+  }
+
   .gallery .pics {
     -webkit-transition: all 350ms ease;
     transition: all 350ms ease;

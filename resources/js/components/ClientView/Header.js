@@ -1,7 +1,6 @@
 import React, { Component, useState } from "react";
 import logo from "../../img/logo1.png";
 import navIcon from "../../img/hamburger.svg";
-import SL_img004 from '../../img/SL_img004.jpg';
 import { Navbar, Nav } from "react-bootstrap";
 import { Link, animateScroll as scroll } from "react-scroll";
 import SignIn from "../Common/SignIn";
@@ -109,9 +108,6 @@ class Header extends Component {
                     </Navbar.Toggle>
                 </Navbar>
                 <Modal className="AuthModal no-gutters" show={this.state.show} onHide={() => this.handleClose()} centered>
-					{/* <Modal.Header closeButton>
-						<Modal.Title>Modal heading</Modal.Title>
-					</Modal.Header> */}
 					<Modal.Body className="no-gutters">
                         <Container className="no-gutters">
                             <Row>
@@ -167,14 +163,6 @@ class Header extends Component {
                             </Row>
                         </Container>
                     </Modal.Body>
-					{/* <Modal.Footer>
-						<Button variant="secondary" onClick={() => this.handleClose()}>
-							Close
-                        </Button>
-						<Button variant="primary" onClick={() => this.handleClose()}>
-							Save Changes
-                        </Button>
-					</Modal.Footer> */}
 				</Modal>
             </>
         );

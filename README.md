@@ -77,3 +77,37 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Authentication with token using Passport
+1. Install passport - composer require laravel/passport
+2. Migrate tables for passport
+3. Create the encryption keys needed to generate secure access tokens passport - php artisan passport:install
+4. add the Laravel\Passport\HasApiTokens trait to your App\User model
+
+<?php
+
+namespace App;
+
+use Laravel\Passport\HasApiTokens; <----------this line
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    use HasApiTokens, Notifiable;<----------and this
+}
+
+5. call the Passport::routes method within the boot method of your AuthServiceProvider 
+6. In config/auth.php configuration file, you should set the driver option of the api authentication guard to passport. This will instruct your application to use Passport's TokenGuard when authenticating incoming API requests
+
+'guards' => [
+    'web' => [
+        'driver' => 'session',
+        'provider' => 'users',
+    ],
+
+    'api' => [
+        'driver' => 'passport',
+        'provider' => 'users',
+    ],
+],

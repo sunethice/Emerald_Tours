@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('packages', 'PackagesController@index');
+Route::post('bespoke', 'BespokeController@store');
+
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();

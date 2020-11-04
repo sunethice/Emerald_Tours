@@ -24,22 +24,22 @@ class Gallery extends Component{
                         <div className="row">
                             <div className="gallery" id="gallery">
                                 <div className="mb-3 pics animation all 2">
-                                    <img className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" alt='Card_image'/>
+                                    <img className="img-fluid galleryPicTypeOne" src={process.env.MIX_PUBLIC_URL + `/images/SL_img004.jpg`} alt='Card_image'/>
                                 </div>
                                 <div className="mb-3 pics animation all 1">
-                                    <img className="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain1.jpg" alt="Card_image"/>
+                                    <img className="img-fluid galleryPicTypeTwo" src={process.env.MIX_PUBLIC_URL + `/images/SL_img004.jpg`} alt="Card_image"/>
                                 </div>
                                 <div className="mb-3 pics animation all 1">
-                                    <img className="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" alt="Card_image"/>
+                                    <img className="img-fluid galleryPicTypeTwo" src="https://mdbootstrap.com/img/Photos/Vertical/mountain2.jpg" alt="Card_image"/>
                                 </div>
                                 <div className="mb-3 pics animation all 2">
-                                    <img className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card_image"/>
+                                    <img className="img-fluid galleryPicTypeOne" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg" alt="Card_image"/>
                                 </div>
                                 <div className="mb-3 pics animation all 2">
-                                    <img className="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card_image"/>
+                                    <img className="img-fluid galleryPicTypeOne" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg" alt="Card_image"/>
                                 </div>
                                 <div className="mb-3 pics animation all 1">
-                                    <img className="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" alt="Card_image"/>
+                                    <img className="img-fluid galleryPicTypeTwo" src="https://mdbootstrap.com/img/Photos/Vertical/mountain3.jpg" alt="Card_image"/>
                                 </div>
                             </div>
                         </div>
