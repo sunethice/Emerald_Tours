@@ -1,0 +1,14 @@
+.react-datepicker-wrapper{
+    display: block !important;
+}
+
+.form-control-select{
+    padding: unset;
+    border: none;
+}
+
+.form-control__control{
+    height: 100%;
+    min-height: unset !important;
+    border-style: none !important;
+}

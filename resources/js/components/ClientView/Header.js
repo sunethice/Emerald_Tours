@@ -26,7 +26,31 @@ class Header extends Component {
 	handleShow() {
 		this.setState({ show: true });
     }
+//
+/*
+https://api.instagram.com/oauth/authorize
+  ?client_id=3395292697205627
+  &redirect_uri=https://emeraldtours.co/
+  &scope=user_profile,user_media
+  &response_type=code
 
+  https://emeraldtours.co/?code=AQBDdOJJNBYJROolhkEPSrgtCsLYZwYYNVDNxLUletELLWlcepAKOnwFKWX7_FmFAO_NQsiwMhyz4CdIZZ5VoyBOAC-Zx_9NMDM1cFwBjRhOgiwc_GyvQh5PkKOptAkRLcpHfhEm5QVTh3TRt3EdFZNKOIsb7sPA-p1YyPBNJXJEdXHMzeOA-UtGJE8khXn4pOPH7TVEnCt-z2N0bhXuKmRCuE_lFH--lyZclOyYbfdJuw#_
+
+
+  curl -X POST \
+  https://api.instagram.com/oauth/access_token \
+  -F client_id=3395292697205627 \
+  -F client_secret=02e19ccb7e085d5a1d441ee11051a99a \
+  -F grant_type=authorization_code \
+  -F redirect_uri=https://emeraldtours.co/ \
+  -F code=AQBDdOJJNBYJROolhkEPSrgtCsLYZwYYNVDNxLUletELLWlcepAKOnwFKWX7_FmFAO_NQsiwMhyz4CdIZZ5VoyBOAC-Zx_9NMDM1cFwBjRhOgiwc_GyvQh5PkKOptAkRLcpHfhEm5QVTh3TRt3EdFZNKOIsb7sPA-p1YyPBNJXJEdXHMzeOA-UtGJE8khXn4pOPH7TVEnCt-z2N0bhXuKmRCuE_lFH--lyZclOyYbfdJuw
+
+  get list of media
+  'https://graph.instagram.com/me?fields=media&access_token=IGQVJYbUFpOThYVXRnTzFEQmhQRkFiRWlNMm51VFRtZADhzZADk1UDF3UTJFNmFzM3dJRFlUd1gwZAmxOa2lPaE1FWnVHOG1GbnRIa043b05GZAUh5d3BIZA2xfeXFDODJLeGR1eDVoU2lkNFVFLXhBd01tdV9EcExXWkNSSmdZA
+
+  get media data
+  https://graph.instagram.com/17871278756062763?fields=id,media_type,media_url,username,timestamp&access_token=IGQVJYbUFpOThYVXRnTzFEQmhQRkFiRWlNMm51VFRtZADhzZADk1UDF3UTJFNmFzM3dJRFlUd1gwZAmxOa2lPaE1FWnVHOG1GbnRIa043b05GZAUh5d3BIZA2xfeXFDODJLeGR1eDVoU2lkNFVFLXhBd01tdV9EcExXWkNSSmdZA
+*/
     render() {
         return (
             <>
@@ -156,7 +180,7 @@ class Header extends Component {
                                 </Col>
                                 <Col xs={6} md={6} className="signInColRight d-sm-none d-md-block">
                                     <div className="closeBtn">
-                                        <FontAwesomeIcon class="closeIcon" icon={faTimes} />
+                                        <FontAwesomeIcon className="closeIcon" icon={faTimes} />
                                     </div>
                                     <img src={ process.env.MIX_PUBLIC_URL + `/images/SL_img004.jpg`} className="signInImg"></img>
                                 </Col>

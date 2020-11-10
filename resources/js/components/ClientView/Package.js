@@ -15,13 +15,14 @@ class Package extends Component {
         {
           return (
             <div id="package_wrap">
-                  <div className="container mt-5">
-                      <div className="row">
-                          <div className="col-12">
-                              <div className="h3 text-center">
-                                  Tour Packages
-                              </div>
-                              <p>
+                <div id="tabs">
+                    <div className="container mt-5">
+                        <div className="row">
+                            <div className="col-12">
+                                <div className="section-title h2">
+                                    Tour Packages
+                                </div>
+                                <p>
                                   Lorem ipsum dolor sit amet, curabitur nec
                                   lacus pellentesque ut facilisis, lacus iaculis
                                   turpis interdum pede, sapien quis amet vitae,
@@ -35,37 +36,36 @@ class Package extends Component {
                                   ac malesuada vitae ut qui, sed rhoncus
                                   nonummy, massa ac urna risus, faucibus aliquam
                                   malesuada fusce gravida urna.
-                              </p>
-                          </div>
-                      </div>
-                      <div className="row">
-                          <div className="col-md-12 d-flex justify-content-center mb-5">
-                              <div className="btn-group">
-                                  <button
-                                      type="button"
-                                      className="btn btn-outline-secondary"
-                                      data-rel="0"
-                                      onClick={() => {this.props.onCreatePressed()}}>
-                                      Sri Lanka
-                                  </button>
-                                  <button
-                                      type="button"
-                                      className="btn btn-outline-secondary"
-                                      data-rel="1"
-                                      onClick={() => {this.onPressed()}}>
-                                      Maldives
-                                  </button>
-                              </div>
-                          </div>
-                      </div>
-                      <div className="row">
-                        {this.props.packages?this.renderPackages():""}
-                        {this.props.packages.length>3?
-                            <div className="col-12 d-flex justify-content-center">
-                                <button className="btn btn-more px-3 text-black text-nowrap nav-link">View More</button>
-                            </div>:""}
-                      </div>
-                  </div>
+                                </p>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-xs-12 ">
+                                <nav className="col-md-12 d-flex justify-content-center mb-5">
+                                    <div className="nav btn-group" id="nav-tab" role="tablist">
+                                        <a className="btn btn-outline-secondary active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Sri Lanka</a>
+                                        <a className="btn btn-outline-secondary" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Maldives</a>
+                                    </div>
+                                </nav>
+                                <div className="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+                                    <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                        <div className="row">
+                                            {this.props.packages?this.renderPackages():""}
+                                            {this.props.packages.length>3?
+                                                <div className="col-12 d-flex justify-content-center">
+                                                    <button className="btn btn-more px-3 text-black text-nowrap nav-link">View More</button>
+                                                </div>:""}
+                                        </div>
+                                    </div>
+                                    <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                        B et consectetur ipsum labore excepteur est proident excepteur ad velit occaecat qui minim occaecat veniam. Fugiat veniam incididunt anim aliqua enim pariatur veniam sunt est aute sit dolor anim. Velit non irure adipisicing aliqua ullamco irure incididunt irure non esse consectetur nostrud minim non minim occaecat. Amet duis do nisi duis veniam non est eiusmod tempor incididunt tempor dolor ipsum in qui sit. Exercitation mollit sit culpa nisi culpa non adipisicing reprehenderit do dolore. Duis reprehenderit occaecat anim ullamco ad duis occaecat ex.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
               </div>
           );
         }

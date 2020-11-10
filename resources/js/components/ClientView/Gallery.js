@@ -10,7 +10,7 @@ class Gallery extends Component{
                     <div className="container ">
                         <div className="row">
                             <div className="col-12">
-                                <div className="h3 text-center">Gallery</div>
+                                <div className="h2 section-title text-white text-center">Gallery</div>
                                 <p>Lorem ipsum dolor sit amet, curabitur nec lacus pellentesque ut facilisis,
                                     lacus iaculis turpis interdum pede, sapien quis amet vitae, erat parturient,
                                     turpis congue sit. Hac nulla phasellus ornare. Volutpat risus ipsum nulla ducimus erat.

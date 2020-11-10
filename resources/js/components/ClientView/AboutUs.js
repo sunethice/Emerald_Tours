@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import aboutus from '../../img/aboutus.jpg';
+
+import cookie from "react-cookies";
+//use this tutorial to translate functionality https://dev.to/robghchen/how-to-use-google-translate-api-27l9
+import { googleTranslate } from "../../utils/googleTranslate";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import '../../css/AboutUs.css';
@@ -11,7 +15,7 @@ class AboutUs extends Component{
             <div className="container bg-white mt-5 p-4">
                 <div className="row">
                     <div className="col-sm-12 col-lg-5">
-                        <div className="h3 text-center">About Us</div>
+                        <div className="h2 section-title text-center">About Us</div>
                         <p className="text-justify">
                             Emerald Tours PVT LTD is a travel agency founded out of passion for travel, our team has years of
                             experience in organizing stays in Sri Lanka and the Maldives.<br/><br/>

@@ -9,9 +9,7 @@ import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import "./css/index.css";
 import Customer from "./Customer";
 import Admin from "./Admin";
-import Dashboard from "./components/AdminView/Dashboard";
-// import UserProfile from "./UserProfile";
-import Packages from "./components/AdminView/Packages";
+import AirportTransfer from "./AirportTransfer";
 
 class Index extends Component {
     render() {
@@ -19,20 +17,7 @@ class Index extends Component {
             <Router>
                 <Route exact path="/" component={Customer}></Route>
                 <Route path="/admin" component={Admin}></Route>
-                {/* <Route
-                    path="/admin"
-                    render={({ match: { url } }) => (
-                    <Switch>
-                        <Route path={`${url}/`} component={Dashboard} exact />
-                        <Route exact path={`${url}/home`}>
-                            <Dashboard/>
-                        </Route>
-                        <Route exact path={`${url}/packages`}>
-                            <Packages/>
-                        </Route>
-                    </Switch>
-                    )}
-                /> */}
+                <Route path="/airport-transfers" component={AirportTransfer}></Route>
             </Router>
         );
     }

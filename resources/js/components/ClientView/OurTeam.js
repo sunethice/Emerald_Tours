@@ -11,11 +11,11 @@ class OurTeam extends Component{
                     <div className="container">
                         <div className="row">
                             <div className="col-12 text-dark">
-                                <div className="h3 text-center">Our Team</div>
-                                <p className="text-center">Lorem ipsum dolor sit amet, curabitur nec lacus pellentesque ut facilisis, 
-                                    lacus iaculis turpis interdum pede, sapien quis amet vitae, erat parturient, 
-                                    turpis congue sit. Hac nulla phasellus ornare. Volutpat risus ipsum nulla ducimus erat. 
-                                    Scelerisque eu imperdiet wisi wisi, sit libero sed ipsum sodales phasellus, 
+                                <div className="h2 section-title text-center">Our Team</div>
+                                <p className="text-center">Lorem ipsum dolor sit amet, curabitur nec lacus pellentesque ut facilisis,
+                                    lacus iaculis turpis interdum pede, sapien quis amet vitae, erat parturient,
+                                    turpis congue sit. Hac nulla phasellus ornare. Volutpat risus ipsum nulla ducimus erat.
+                                    Scelerisque eu imperdiet wisi wisi, sit libero sed ipsum sodales phasellus,
                                     odio vel ac non ac, sodales viverra, metus volutpat quis rutrum diam ac integer.
                                 </p>
                             </div>

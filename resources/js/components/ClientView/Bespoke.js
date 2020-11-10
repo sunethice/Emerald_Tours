@@ -61,7 +61,7 @@ class Bespoke extends Component {
                             />
                         </div>
                         <div className="col-12 col-sm-6 p-5">
-                            <div className="h3 text-center">Bespoke Tours</div>
+                            <div className="h2 section-title text-white text-center">Bespoke Tours</div>
                             <p className="text-center">
                                 Lorem ipsum dolor sit amet, curabitur nec lacus
                                 pellentesque ut facilisis.

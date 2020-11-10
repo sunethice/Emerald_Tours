@@ -1,0 +1,30 @@
+.excursion-card-rounded {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.excursion-header{
+    height: 200px;
+    padding:0px;
+}
+
+.excursion-header img{
+    height: 100%;
+}
+
+.excursion-footer{
+    padding:0px;
+    border: unset;
+}
+
+.excursion-name{
+    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: 32px;
+}
+
+.excursion-btn{
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    margin-right: 1rem !important;
+}

@@ -1,0 +1,25 @@
+react datepicker - https://reactdatepicker.com/
+                 - https://www.npmjs.com/package/react-datepicker
+
+mobile UI design ideas
+                 - https://www.pinterest.com.au/pin/835277062129625146/
+                 -
+
+Desktop UI design ideas
+                 - https://dribbble.com/shots/5212113-Lovebirds-Website-Login-Design
+
+Instagram Integration
+                 - https://stackoverflow.com/questions/49756519/instagram-api-diplaying-medias-in-react-application
+                 - https://developers.facebook.com/docs/instagram-basic-display-api/guides
+                 - https://developers.facebook.com/docs/instagram-basic-display-api/guides/long-lived-access-tokens
+                 - https://levelup.gitconnected.com/getting-started-with-the-instagram-basic-display-api-5124c92c4935
+                 - https://dev.to/hoangit/tutorial-use-instagram-basic-display-api-with-javascript-2j0f -this one might be good
+
+smooth scrolling
+                 - https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
+
+react-select
+                 - https://www.cluemediator.com/how-to-get-selected-by-only-value-in-react-select
+
+circular bootstrap tabs
+                 - https://bootsnipp.com/snippets/D7e0G

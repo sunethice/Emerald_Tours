@@ -10,6 +10,13 @@ html, body {
   /* font-weight: 400; */
 }
 
+.section-title {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
 /* .aboutus-ul li::before {
   content: "";
   position: absolute;

@@ -132,6 +132,7 @@
     justify-content: center;
     display: flex;
     opacity: 0.6;
+    align-items: center;
 }
 
 .closeBtn:hover{
