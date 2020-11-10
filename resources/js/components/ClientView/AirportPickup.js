@@ -50,14 +50,10 @@ class AirportPickup extends Component {
             { value: "3", label: "Bentota" },
             { value: "4", label: "Hikkaduwa" }
         ];
-        const packsOptions = [
-            { value: "1", label: "1" },
-            { value: "2", label: "2" },
-            { value: "3", label: "3" },
-            { value: "4", label: "4" },
-            { value: "5", label: "5" },
-            { value: "6", label: "6" },
-            { value: "7", label: "7" }
+        const vehicleOptions = [
+            { value: "1", label: "Standard car - 02 People" },
+            { value: "2", label: "Micro van - 3-4 People" },
+            { value: "3", label: "High roof micro van - 5-6 People" }
         ];
         let calculatedVal = 800;
         return (
@@ -125,11 +121,11 @@ class AirportPickup extends Component {
                                     </div>
                                     <div className="col">
                                         <Select
-                                            placeholder="No. of Pax"
+                                            placeholder="Vehicle"
                                             className="form-control form-control-select"
                                             classNamePrefix="form-control"
-                                            value={packsOptions.find(obj => obj.value === noOfPacks)}
-                                            options={packsOptions}
+                                            value={vehicleOptions.find(obj => obj.value === noOfPacks)}
+                                            options={vehicleOptions}
                                             onChange={obj =>
                                                 this.onPacksChange(obj)
                                             }

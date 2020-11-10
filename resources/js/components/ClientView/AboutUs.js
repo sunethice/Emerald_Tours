@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import aboutus from '../../img/aboutus.jpg';
 
-import cookie from "react-cookies";
+// import cookie from "react-cookies";
 //use this tutorial to translate functionality https://dev.to/robghchen/how-to-use-google-translate-api-27l9
-import { googleTranslate } from "../../utils/googleTranslate";
+// import { googleTranslate } from "../../utils/googleTranslate";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import '../../css/AboutUs.css';
