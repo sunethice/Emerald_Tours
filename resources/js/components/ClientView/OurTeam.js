@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import TR01 from '../../img/TR01.jpg';
-import TR02 from '../../img/TR02.jpg';
-
 class OurTeam extends Component{
 
     render(){
@@ -22,16 +19,16 @@ class OurTeam extends Component{
                         </div>
                         <div id="TeamImages" className="row">
                             <div className="col-12 col-lg-3">
-                                <img className="img-fluid" src={TR01} alt="Team representative"/>
+                                <img className="img-fluid" src={process.env.MIX_PUBLIC_IMAGE_URL + 'TR01.jpg'} alt="Team representative"/>
                             </div>
                             <div className="col-12 col-lg-3">
-                                <img className="img-fluid" src={TR02} alt="Team representative"/>
+                                <img className="img-fluid" src={process.env.MIX_PUBLIC_IMAGE_URL + 'TR02.jpg'} alt="Team representative"/>
                             </div>
                             <div className="col-12 col-lg-3">
-                                <img className="img-fluid" src={TR01} alt="Team representative"/>
+                                <img className="img-fluid" src={process.env.MIX_PUBLIC_IMAGE_URL + 'TR01.jpg'} alt="Team representative"/>
                             </div>
                             <div className="col-12 col-lg-3">
-                                <img className="img-fluid" src={TR02} alt="Team representative"/>
+                                <img className="img-fluid" src={process.env.MIX_PUBLIC_IMAGE_URL + 'TR02.jpg'} alt="Team representative"/>
                             </div>
                         </div>
                     </div>

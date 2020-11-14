@@ -1,8 +1,6 @@
 import React,{ Component, useState } from "react";
 import { connect } from 'react-redux';
 import { listPackages } from '../actions/PackageAction';
-import pkg1 from '../../img/tour-package1.jpg';
-import pkg2 from '../../img/tour-package1.jpg';
 import '../../css/Package.css';
 
 class Package extends Component {
@@ -50,8 +48,8 @@ class Package extends Component {
                                 <div className="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
                                     <div className="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                                         <div className="row">
-                                            {this.props.packages?this.renderPackages():""}
-                                            {this.props.packages.length>3?
+                                            {(typeof this.props.packages !== 'undefined')?this.renderPackages():""}
+                                            {((typeof this.props.packages !== 'undefined') && this.props.packages.length>3)?
                                                 <div className="col-12 d-flex justify-content-center">
                                                     <button className="btn btn-more px-3 text-black text-nowrap nav-link">View More</button>
                                                 </div>:""}
@@ -80,7 +78,7 @@ class Package extends Component {
                     <div className="travel-place">
                         <div className="work-image">
                             <img
-                                src={pkg1}
+                                src={process.env.MIX_PUBLIC_IMAGE_URL + 'tour-package1.jpg'}
                                 className="img-fluid person"
                                 alt="destination"
                             />

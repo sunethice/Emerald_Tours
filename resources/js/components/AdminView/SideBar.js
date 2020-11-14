@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './SideBar.css';
-import TR01 from '../../img/TR01.jpg';
 import { Link } from "react-router-dom";
 
 class SideBar extends Component{
@@ -8,7 +7,7 @@ class SideBar extends Component{
         return (
             <nav id="sidebar">
                 <div className="pt-5 pb-3">
-                    <img className="sidebar-img rounded-circle d-flex mx-auto" src={TR01} href="#d"></img>
+                    <img className="sidebar-img rounded-circle d-flex mx-auto" src={process.env.MIX_PUBLIC_IMAGE_URL + 'TR01.jpg'} href="#d"></img>
                     <h3 className="text-center py-3">Seneth De Silva</h3>
                 </div>
 

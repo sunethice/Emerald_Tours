@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import PhoneCode from 'react-phone-code'; //this is working and dependency is still available in the project
 import { CountryDropdown } from "react-country-region-selector";
-import bespoke_img from "../../img/bespoke.jpg";
 import axios from "axios";
 import "../../css/bespoke.css";
 
@@ -54,7 +53,7 @@ class Bespoke extends Component {
                     <div className="row no-gutters">
                         <div className="col-12 col-sm-6">
                             <img
-                                src={bespoke_img}
+                                src={process.env.MIX_PUBLIC_IMAGE_URL + 'bespoke.jpg'}
                                 href=""
                                 alt="bespoke"
                                 style={{ maxWidth: "100%" }}

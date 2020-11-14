@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import logo from '../../img/logo1.png';
-import aboutus from '../../img/aboutus.jpg';
-
 class Footer extends Component{
 
     render(){
@@ -75,24 +73,24 @@ class Footer extends Component{
                                 <hr className="mb-4 mt-0 d-flex justify-content-center d-inline-block" style={{width: '60px', backgroundColor:'#fff'}}></hr>
                                 <div className="row d-flex justify-content-center">
                                     <div className="col-3 m-0 p-0">
-                                        <img className="img-thumbnail border-0 p-1 bg-transparent" src={aboutus} alt=""/>
+                                        <img className="img-thumbnail border-0 p-1 bg-transparent" src={process.env.MIX_PUBLIC_IMAGE_URL + 'aboutus.jpg'} alt=""/>
                                     </div>
                                     <div className="col-3 m-0 p-0">
-                                        <img className="img-thumbnail border-0 p-1 bg-transparent" src={aboutus} alt=""/>
+                                        <img className="img-thumbnail border-0 p-1 bg-transparent" src={process.env.MIX_PUBLIC_IMAGE_URL + 'aboutus.jpg'} alt=""/>
                                     </div>
                                     <div className="col-3 m-0 p-0">
-                                        <img className="img-thumbnail border-0 p-1 bg-transparent" src={aboutus} alt=""/>
+                                        <img className="img-thumbnail border-0 p-1 bg-transparent" src={process.env.MIX_PUBLIC_IMAGE_URL + 'aboutus.jpg'} alt=""/>
                                     </div>
                                 </div>
                                 <div className="row d-flex justify-content-center">
                                     <div className="col-3 m-0 p-0">
-                                        <img className="img-thumbnail border-0 p-1 bg-transparent" src={aboutus} alt=""/>
+                                        <img className="img-thumbnail border-0 p-1 bg-transparent" src={process.env.MIX_PUBLIC_IMAGE_URL + 'aboutus.jpg'} alt=""/>
                                     </div>
                                     <div className="col-3 m-0 p-0">
-                                        <img className="img-thumbnail border-0 p-1 bg-transparent" src={aboutus} alt=""/>
+                                        <img className="img-thumbnail border-0 p-1 bg-transparent" src={process.env.MIX_PUBLIC_IMAGE_URL + 'aboutus.jpg'} alt=""/>
                                     </div>
                                     <div className="col-3 m-0 p-0">
-                                        <img className="img-thumbnail border-0 p-1 bg-transparent" src={aboutus} alt=""/>
+                                        <img className="img-thumbnail border-0 p-1 bg-transparent" src={process.env.MIX_PUBLIC_IMAGE_URL + 'aboutus.jpg'} alt=""/>
                                     </div>
                                 </div>
                             </div>

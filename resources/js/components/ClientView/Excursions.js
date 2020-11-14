@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import '../../css/Excursion.css';
-import excursion_img1 from "../../img/colombo_excursion.jpg";
-import excursion_img2 from "../../img/galle_excursion.jpg";
-import excursion_img3 from "../../img/sigiriya_excursion.jpg";
-
 class Excursions extends Component{
 
     render(){
@@ -40,7 +36,7 @@ class Excursions extends Component{
                                 <div className="row no-gutters">
                                     <div className="col">
                                         <div className="card-header excursion-header">
-                                            <img className="" width="100%" height="100%" src={excursion_img1}/>
+                                            <img className="" width="100%" height="100%" src={process.env.MIX_PUBLIC_IMAGE_URL + 'colombo_excursion.jpg'}/>
                                         </div>
                                         <div className="card-footer excursion-footer">
                                             <p className="p-3 float-left excursion-name">Colombo city tour</p>
@@ -55,7 +51,7 @@ class Excursions extends Component{
                                 <div className="row no-gutters">
                                     <div className="col">
                                         <div className="card-header excursion-header">
-                                            <img className="" width="100%" height="100%" src={excursion_img2}/>
+                                            <img className="" width="100%" height="100%" src={process.env.MIX_PUBLIC_IMAGE_URL + 'galle_excursion.jpg'}/>
                                         </div>
                                         <div className="card-footer excursion-footer">
                                             <p className="p-3 float-left excursion-name">Galle tour</p>
@@ -70,7 +66,7 @@ class Excursions extends Component{
                                 <div className="row no-gutters">
                                     <div className="col">
                                         <div className="card-header excursion-header">
-                                            <img className="" width="100%" height="100%" src={excursion_img3}/>
+                                            <img className="" width="100%" height="100%" src={process.env.MIX_PUBLIC_IMAGE_URL + 'sigiriya_excursion.jpg'}/>
                                         </div>
                                         <div className="card-footer excursion-footer">
                                             <p className="p-3 float-left excursion-name">Sigiriya tour</p>

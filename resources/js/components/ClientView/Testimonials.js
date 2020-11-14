@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import usr1_img from '../../img/user1_img.jpg';
-
 import '../../css/testimonials.css';
 
 class Testimonials extends Component{
@@ -24,7 +22,7 @@ class Testimonials extends Component{
                   <div className="card mb-3 mt-5 testimonial-card-rounded" style={{ maxWidth: '540px' }}>
                     <div className="row no-gutters">
                       <div className="col testimonial-img-wrapper">
-                        <img className="testimonial-img" width="100%" height="250" src={usr1_img}/>
+                        <img className="testimonial-img" width="100%" height="250" src={process.env.MIX_PUBLIC_IMAGE_URL + 'user1_img.jpg'}/>
                       </div>
                       <div className="col testimonial-content-wrapper">
                         <div className="card-body testimonial-card-body">
@@ -42,7 +40,7 @@ class Testimonials extends Component{
                   <div className="card mb-3 mt-3 testimonial-card-rounded" style={{ maxWidth: '540px' }}>
                     <div className="row no-gutters">
                       <div className="col testimonial-img-wrapper">
-                        <img className="testimonial-img" width="100%" height="250" src={usr1_img}/>
+                        <img className="testimonial-img" width="100%" height="250" src={process.env.MIX_PUBLIC_IMAGE_URL + 'user1_img.jpg'}/>
                       </div>
                       <div className="col testimonial-content-wrapper">
                         <div className="card-body testimonial-card-body">
@@ -57,7 +55,7 @@ class Testimonials extends Component{
                   <div className="card mb-3 mt-5 testimonial-card-rounded" style={{ maxWidth: '540px' }}>
                     <div className="row no-gutters">
                       <div className="col testimonial-img-wrapper">
-                        <img className="testimonial-img" width="100%" height="250" src={usr1_img}/>
+                        <img className="testimonial-img" width="100%" height="250" src={process.env.MIX_PUBLIC_IMAGE_URL + 'user1_img.jpg'}/>
                       </div>
                       <div className="col testimonial-content-wrapper">
                         <div className="card-body testimonial-card-body">

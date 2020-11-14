@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
 import Select from "react-select";
-import airportpickup_img from "../../img/airport_pickup.jpg";
 import "react-datepicker/dist/react-datepicker.css";
 import "../../css/AirportPickup.css";
 
@@ -65,7 +64,7 @@ class AirportPickup extends Component {
                     <div className="row no-gutters">
                         <div className="col-12 col-sm-6">
                             <img
-                                src={airportpickup_img}
+                                src={process.env.MIX_PUBLIC_IMAGE_URL + 'airport_pickup.jpg'}
                                 href=""
                                 alt="bespoke"
                                 style={{ maxWidth: "100%" }}

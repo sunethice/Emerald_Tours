@@ -1,5 +1,4 @@
 import React, { Component, useState } from "react";
-import logo from "../../img/logo1.png";
 import navIcon from "../../img/hamburger.svg";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link, animateScroll as scroll } from "react-scroll";
@@ -103,7 +102,7 @@ https://api.instagram.com/oauth/authorize
                         <img
                             className="d-block mx-lg-auto"
                             style={{ width: "30%" }}
-                            src={logo}
+                            src={process.env.MIX_PUBLIC_IMAGE_URL + 'logo1.png'}
                             href="#"
                             alt="Emerald Tours"
                         ></img>

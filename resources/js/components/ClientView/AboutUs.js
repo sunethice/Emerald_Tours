@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import aboutus from '../../img/aboutus.jpg';
-
 // import cookie from "react-cookies";
 //use this tutorial to translate functionality https://dev.to/robghchen/how-to-use-google-translate-api-27l9
 // import { googleTranslate } from "../../utils/googleTranslate";
@@ -35,7 +33,7 @@ class AboutUs extends Component{
                         </p>
                     </div>
                     <div className="col-lg-4 h-100">
-                        <img className="d-sm-none d-md-block w-100 h-100" src={aboutus} alt=""/>
+                        <img className="d-sm-none d-md-block w-100 h-100" src={process.env.MIX_PUBLIC_IMAGE_URL + 'aboutus.jpg'} alt=""/>
                     </div>
                     <div className="col-sm-12 col-lg-3 pt-4 pt-md-0">
                         <span className="h2">why book with us?</span>
