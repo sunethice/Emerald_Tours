@@ -47,3 +47,6 @@ A. Passport setup
     5. Call Passport::routes() method within boot method of AuthServiceProvider - this method register the routes
        necessary to issue access tokens and revoke access tokens, clients and personal access tokens.
     6. change the driver to passport in auth.php file - 'driver' => 'passport',
+
+
+GitHub Personal Access Token : 4174dac03fa07d990e4a8efda70a668129ecb168
