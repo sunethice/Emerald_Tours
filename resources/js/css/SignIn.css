@@ -1,0 +1,40 @@
+.btn-label {
+    position: relative;
+    left: -26px;
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(0,0,0,0.15);
+    border-radius: 3px 0 0 3px;
+    width: 31.88px;
+}
+
+.btn-label-google{
+    width: 34px;
+}
+
+.btn-text {
+    position: relative;
+    display: inline-block;
+    width: 55.25px;
+}
+
+.btn-labeled {
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;
+}
+
+.btn-auth {
+    margin-bottom:10px;
+    min-width: 140px;
+}
+
+.btn-facebook{
+    color: #fff;
+    background-color:#3b5998;
+}
+
+.btn-google{
+    color: #fff;
+    background-color:#d62d20;
+}

@@ -10,13 +10,28 @@ import "./css/index.css";
 import Customer from "./Customer";
 import Admin from "./Admin";
 import AirportTransfer from "./AirportTransfer";
+import ExploreSriLanka from "./ExploreSriLanka";
+import { ToastContainer, toast, Slide } from 'react-toastify';
 
 class Index extends Component {
     render() {
         return (
             <Router>
+                <ToastContainer
+                    position="bottom-right"
+                    transition={Slide}
+                    autoClose={5000}
+                    hideProgressBar={true}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
                 <Route exact path="/" component={Customer}></Route>
                 <Route path="/admin" component={Admin}></Route>
+                <Route exact path="/explore-srilanka" component={ExploreSriLanka}></Route>
                 <Route path="/airport-transfers" component={AirportTransfer}></Route>
             </Router>
         );

@@ -17,22 +17,22 @@ class Footer extends Component{
                                         <i className="fas fa-home mr-3"></i>Address:
                                     </div>
                                     <div className="col text-left">
-                                        <div className="">420 Rankin Street Avenue</div>
-                                        <div className="text-nowrap">burwood Highway,</div>
-                                        <div className="">Australia</div>
+                                        <div className="">No.351/20, Weligampitiya,</div>
+                                        <div className="text-nowrap">Ja-Ela 11350,</div>
+                                        <div className="">Sri Lanka</div>
                                     </div>
                                 </div>
                                 <div className="row">
                                     <div className="col text-left">
                                         <i className="fas fa-phone mr-3"></i>Phone:
                                     </div>
-                                    <div className="col text-left">+612012345678</div>
+                                    <div className="col text-left">+94 (77) 700 4977</div>
                                 </div>
                                 <div className="row">
                                     <div className="col text-left">
                                         <i className="fas fa-envelope mr-3"></i>Email :
                                     </div>
-                                    <div className="col text-left">info@emerald.com</div>
+                                    <div className="col text-left">info@emeraldtours.co</div>
                                 </div>
                             </div>
                             <div className="col-md-3 mt-sm-4 pb-3 pb-md-0 text-white">

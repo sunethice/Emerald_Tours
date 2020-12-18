@@ -16,14 +16,15 @@ class CreatePackagesTable extends Migration
         Schema::create('packages', function (Blueprint $table) {
             $table->bigIncrements('package_id');
             $table->string('name', 50);
-            $table->bigInteger('category_id')->unsigned();
+            // $table->bigInteger('category_id')->unsigned();
+            $table->text('description');
             $table->integer('no_of_days');
             $table->integer('no_of_nights');
             $table->boolean('featured')->default(false);
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('category_id')->references('category_id')->on('package_category');
+            // $table->foreign('category_id')->references('category_id')->on('package_category');
         });
     }
 

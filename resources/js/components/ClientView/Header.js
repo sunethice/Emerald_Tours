@@ -3,7 +3,7 @@ import navIcon from "../../img/hamburger.svg";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link, animateScroll as scroll } from "react-scroll";
 import SignIn from "../Common/SignIn";
-import { Modal, Container, Row, Col, Button } from "react-bootstrap";
+import { Modal, Container, Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import '../../css/Header.css';
@@ -18,13 +18,9 @@ class Header extends Component {
 		};
 	}
 
-	handleClose() {
-		this.setState({ show: false });
+	modalToggle() {
+		this.setState({ show: !this.state.show });
 	}
-
-	handleShow() {
-		this.setState({ show: true });
-    }
 //
 /*
 https://api.instagram.com/oauth/authorize
@@ -114,11 +110,11 @@ https://api.instagram.com/oauth/authorize
                             </Nav.Link>
                             <Nav.Link
                                 className="px-3 text-white text-nowrap"
-                                href="#Explore"
+                                href="/explore-srilanka"
                             >
                                 Explore SriLanka
                             </Nav.Link>
-                            <Nav.Link className="px-3 text-white" href="" onClick={() => this.handleShow()}>
+                            <Nav.Link className="px-3 text-white" href="" onClick={() => this.modalToggle()}>
                                 SignIn
                             </Nav.Link>
                             <Nav.Link className="btn inquire-btn px-3 text-black text-nowrap">
@@ -130,55 +126,15 @@ https://api.instagram.com/oauth/authorize
                         <img src={navIcon} alt="nav icon" />
                     </Navbar.Toggle>
                 </Navbar>
-                <Modal className="AuthModal no-gutters" show={this.state.show} onHide={() => this.handleClose()} centered>
+                <Modal className="AuthModal no-gutters" show={this.state.show} onHide={() => this.modalToggle()} centered>
 					<Modal.Body className="no-gutters">
                         <Container className="no-gutters">
                             <Row>
                                 <Col xs={12} md={6} className="signInColLeft">
-                                    <div className="ModalHeading text-center">Welcome to Emerald Tours</div>
-                                    <form>
-                                        <div className="form-row mb-3">
-                                            <div className="col">
-                                                <input type="email" className="form-control signinEntry" placeholder="Email"/>
-                                            </div>
-                                        </div>
-                                        <div className="form-row mb-3">
-                                            <div className="col">
-                                                <input type="password" className="form-control signinEntry" placeholder="Password"/>
-                                            </div>
-                                        </div>
-                                        <div className="form-row mb-3">
-                                            <div className="col text-left">
-                                                <input type="checkbox" className="form-control chkKeepSigned"/>
-                                                <a href="" className="forgotPass">Keep me signed in</a>
-                                            </div>
-                                            <div className="col text-right">
-                                                <a href="" className="forgotPass">Forgot password?</a>
-                                            </div>
-                                        </div>
-                                        <div className="form-row mb-3 text-center">
-                                            <div className="col">
-                                                <button type="submit" className="btn btn-warning btn-signin">Sign in</button>
-                                            </div>
-                                        </div>
-                                        <div className="form-row mb-3">
-                                            <div className="col text-center signUpWrap">
-                                                Don't have an account?&nbsp;<a href="" className="signUp">Sign Up</a>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <div className="horizontalLine">&nbsp;or&nbsp;</div>
-                                    <Row className="mb-3 text-center">
-                                        <Col xs={12} md={6}>
-                                            <button type="submit" className="btn btn-warning btn-signin">Sign in with facebook</button>
-                                        </Col>
-                                        <Col xs={12} md={6}>
-                                            <button type="submit" className="btn btn-warning btn-signin">Sign in with google</button>
-                                        </Col>
-                                    </Row>
+                                    <SignIn/>
                                 </Col>
                                 <Col xs={6} md={6} className="signInColRight d-sm-none d-md-block">
-                                    <div className="closeBtn">
+                                    <div className="closeBtn" onClick={() => this.modalToggle()}>
                                         <FontAwesomeIcon className="closeIcon" icon={faTimes} />
                                     </div>
                                     <img src={ process.env.MIX_PUBLIC_URL + `/images/SL_img004.jpg`} className="signInImg"></img>

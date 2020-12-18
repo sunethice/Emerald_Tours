@@ -30,6 +30,6 @@ class BespokeConfirmation extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.bespokeconf');
+        return $this->subject("$this->cBespoke->clientname")->view('emails.bespokeconf');
     }
 }

@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Mail;
 
 class BespokeController extends Controller
 {
-    public function store(Request $request){
+    public function cpStore(Request $request){
         $this->validate($request,[
             'clientname' => 'required',
             'email' => 'required|email',

@@ -1,2 +1,5 @@
+export const SIGNIN = 'SIGNIN';
+export const SIGNOUT = 'SIGNOUT';
 export const LIST_PACKAGES = 'LIST_PACKAGES';
 export const LIST_PACKAGES_FAILURE = 'LIST_PACKAGES_FAILURE';
+

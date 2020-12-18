@@ -24,7 +24,7 @@ class Gallery extends Component{
                         <div className="row">
                             <div className="gallery" id="gallery">
                                 <div className="mb-3 pics animation all 2">
-                                    <img className="img-fluid galleryPicTypeOne" src={process.env.MIX_PUBLIC_URL + `/images/SL_img004.jpg`} alt='Card_image'/>
+                                    <img className="img-fluid galleryPicTypeOne" src={process.env.MIX_PUBLIC_URL + `/images/gallery_img1.jpg`} alt='Card_image'/>
                                 </div>
                                 <div className="mb-3 pics animation all 1">
                                     <img className="img-fluid galleryPicTypeTwo" src={process.env.MIX_PUBLIC_URL + `/images/SL_img004.jpg`} alt="Card_image"/>

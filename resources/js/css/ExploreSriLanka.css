@@ -1,0 +1,129 @@
+.mapContainer {
+    max-width: 960px;
+    display: flex;
+    justify-items: center;
+}
+
+.mapRow {
+    display: flex;
+}
+
+.mapCol {
+    display: flex;
+    justify-content: center;
+}
+
+.mapWrapper {
+    width: 80%;
+    height: 80%;
+}
+
+/* "LKA2448": "Mahanuvara",
+"LKA2449": "Mātale",
+"LKA2450": "Nuvara Ĕliya",
+"LKA2451": "Ampāra",
+"LKA2452": "Maḍakalapuva",
+"LKA2453": "Pŏḷŏnnaruva",
+"LKA2454": "Trikuṇāmalaya",
+"LKA2455": "Anurādhapura",
+"LKA2456": "Vavuniyāva",
+"LKA2457": "Mannārama",
+"LKA2458": "Mulativ",
+"LKA2459": "Yāpanaya",
+"LKA2460": "Kilinŏchchi",
+"LKA2461": "Kuruṇægala",
+"LKA2462": "Puttalama",
+"LKA2463": "Ratnapura",
+"LKA2464": "Gālla",
+"LKA2465": "Hambantŏṭa",
+"LKA2466": "Mātara",
+"LKA2467": "Badulla",
+"LKA2468": "Mŏṇarāgala",
+"LKA2469": "Kægalla",
+"LKA2470": "Kŏḷamba",
+"LKA2471": "Gampaha",
+"LKA2472": "Kaḷutara" */
+
+svg path:hover {
+    fill: #ff0000;
+}
+
+svg path[id="LKA2448"] {
+    fill: #9ecae1;
+}
+svg path[id="LKA2449"] {
+    fill: #6baed6;
+}
+svg path[id="LKA2450"] {
+    fill: #4292c6;
+}
+svg path[id="LKA2451"] {
+    fill: #2171b5;
+}
+svg path[id="LKA2452"] {
+    fill: #9ecae1;
+}
+svg path[id="LKA2453"] {
+    fill: #6baed6;
+}
+svg path[id="LKA2454"] {
+    fill: #4292c6;
+}
+svg path[id="LKA2455"] {
+    fill: #2171b5;
+}
+svg path[id="LKA2456"] {
+    fill: #9ecae1;
+}
+svg path[id="LKA2457"] {
+    fill: #6baed6;
+}
+svg path[id="LKA2458"] {
+    fill: #4292c6;
+}
+svg path[id="LKA2459"] {
+    fill: #2171b5;
+}
+svg path[id="LKA2460"] {
+    fill: #9ecae1;
+}
+svg path[id="LKA2461"] {
+    fill: #6baed6;
+}
+svg path[id="LKA2462"] {
+    fill: #4292c6;
+}
+svg path[id="LKA2463"] {
+    fill: #2171b5;
+}
+svg path[id="LKA2464"] {
+    fill: #9ecae1;
+}
+svg path[id="LKA2465"] {
+    fill: #6baed6;
+}
+svg path[id="LKA2466"] {
+    fill: #4292c6;
+}
+svg path[id="LKA2467"] {
+    fill: #2171b5;
+}
+svg path[id="LKA2468"] {
+    fill: #9ecae1;
+}
+svg path[id="LKA2469"] {
+    fill: #6baed6;
+}
+svg path[id="LKA2470"] {
+    fill: #4292c6;
+}
+svg path[id="LKA2471"] {
+    fill: #2171b5;
+}
+svg path[id="LKA2472"] {
+    fill: #9ecae1;
+}
+
+.popover {
+    width: 500px; /* Max Width of the popover (depending on the container!) */
+}

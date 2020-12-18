@@ -15,9 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('packages', 'PackagesController@index');
-Route::post('bespoke', 'BespokeController@store');
+Route::get('packages', 'PackagesController@cpIndex');
+Route::post('bespoke', 'BespokeController@cpStore');
 
+Route::group(['prefix' => 'auth','middleware' => ['cors', 'json.response']], function () {
+    Route::post('signin','AuthController@cpSignIn');
+    Route::post('signup','AuthController@cpSignUp');
+    Route::group(['middleware'=> 'auth:api'], function () {
+        Route::get('signout', 'AuthController@cpSignOut');
+        Route::get('user', 'AuthController@cpGetUser');
+    });
+
+});
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //     return $request->user();

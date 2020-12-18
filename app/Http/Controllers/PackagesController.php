@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class PackagesController extends Controller
 {
     //
-    public function index(){
+    public function cpIndex(){
         // $packages = Package::where('featured', true)->get();
 
         $packages = Package::with('packageCategory')->get();
@@ -20,27 +20,27 @@ class PackagesController extends Controller
         return $packages->toJson();
     }
 
-    public function show(){
+    public function cpShow(){
 
     }
 
-    public function create(){
+    public function cpCreate(){
 
     }
 
-    public function store(){
+    public function cpStore(){
 
     }
 
-    public function edit(){
+    public function cpEdit(){
 
     }
 
-    public function update(){
+    public function cpUpdate(){
 
     }
 
-    public function destroy(){
+    public function cpDestroy(){
 
     }
 }

@@ -7,7 +7,7 @@
     background-repeat: no-repeat;
     background-position-x: 100%;
     background-position-y: 5px;
-
+    padding-left: 0.3rem;
 }
 .bespokeCountry::-ms-expand {
     display: none;
@@ -17,6 +17,6 @@
     background-position-y: 5px;
 }
 
-.bespokeCountryCode{
-    width:
+.msgTxtArea{
+    resize: none;
 }
