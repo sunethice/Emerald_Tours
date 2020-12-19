@@ -2,6 +2,8 @@ import React, { Component } from "react";
 // import PhoneCode from 'react-phone-code'; //this is working and dependency is still available in the project
 import { CountryDropdown } from "react-country-region-selector";
 import axios from "axios";
+import { ToastContainer, Slide } from "react-toastify";
+import notifyService from "../services/notifyService";
 import "../../css/bespoke.css";
 
 class Bespoke extends Component {
@@ -17,6 +19,7 @@ class Bespoke extends Component {
         };
     }
 
+    // }
     // getPhoneNumber(countryCode){
     //     this.setState({ countryCode: countryCode });
     //     console.log("values selected are:", countryCode);
@@ -27,12 +30,34 @@ class Bespoke extends Component {
         event.preventDefault();
         event.stopPropagation();
         const { clientname, email, country, phone, message } = this.state;
-        axios.post("/api/bespoke", { clientname, email, country, phone, message })
-            .then(res =>{
-                console.log(res);
-            }).catch(error => {
-                console.log(error.response)
+        axios
+            .post("/api/bespoke", {
+                clientname,
+                email,
+                country,
+                phone,
+                message
+            })
+            .then(res => {
+                if (res.status == 200) {
+                    console.log(res.data);
+                    this.formReset();
+                    toast("Bespoke request sent successfully");
+                }
+            })
+            .catch(error => {
+                console.log(error.response);
             });
+    }
+
+    formReset() {
+        this.setState({
+            clientname: "",
+            email: "",
+            country: "",
+            phone: "",
+            message: ""
+        });
     }
 
     render() {
@@ -53,14 +78,19 @@ class Bespoke extends Component {
                     <div className="row no-gutters">
                         <div className="col-12 col-sm-6">
                             <img
-                                src={process.env.MIX_PUBLIC_IMAGE_URL + 'bespoke.jpg'}
+                                src={
+                                    process.env.MIX_PUBLIC_IMAGE_URL +
+                                    "bespoke.jpg"
+                                }
                                 href=""
                                 alt="bespoke"
                                 style={{ maxWidth: "100%" }}
                             />
                         </div>
                         <div className="col-12 col-sm-6 p-5">
-                            <div className="h2 section-title text-white text-center">Bespoke Tours</div>
+                            <div className="h2 section-title text-white text-center">
+                                Bespoke Tours
+                            </div>
                             <p className="text-center">
                                 Lorem ipsum dolor sit amet, curabitur nec lacus
                                 pellentesque ut facilisis.
@@ -74,7 +104,10 @@ class Bespoke extends Component {
                                             className="form-control"
                                             placeholder="Name"
                                             onChange={event =>
-                                                this.setState({ clientname: event.target.value })
+                                                this.setState({
+                                                    clientname:
+                                                        event.target.value
+                                                })
                                             }
                                         />
                                     </div>
@@ -85,7 +118,9 @@ class Bespoke extends Component {
                                             className="form-control"
                                             placeholder="Email"
                                             onChange={event =>
-                                                this.setState({ email: event.target.value })
+                                                this.setState({
+                                                    email: event.target.value
+                                                })
                                             }
                                         />
                                     </div>
@@ -119,7 +154,9 @@ class Bespoke extends Component {
                                             className="form-control"
                                             placeholder="Telephone"
                                             onChange={event =>
-                                                this.setState({ phone: event.target.value })
+                                                this.setState({
+                                                    phone: event.target.value
+                                                })
                                             }
                                         />
                                     </div>
@@ -129,11 +166,13 @@ class Bespoke extends Component {
                                         <textarea
                                             id="messageTxt"
                                             value={message}
-                                            className="form-control"
+                                            className="form-control msgTxtArea"
                                             rows="3"
                                             placeholder="Message"
                                             onChange={event =>
-                                                this.setState({ message: event.target.value })
+                                                this.setState({
+                                                    message: event.target.value
+                                                })
                                             }
                                         ></textarea>
                                     </div>
@@ -143,7 +182,7 @@ class Bespoke extends Component {
                                         <button
                                             type="submit"
                                             className="btn btn-warning"
-                                            onClick={(event) => {
+                                            onClick={event => {
                                                 this.onInquireNowClick(event);
                                             }}
                                         >
