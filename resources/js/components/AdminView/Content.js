@@ -1,75 +1,44 @@
-// import React, { Component } from  'react';
+import React, { useState } from "react";
+import { Navbar, Nav } from "react-bootstrap";
+import { Link } from "react-scroll";
+import navIcon from "../../img/hamburger.svg";
 
-// class Content extends Component{
-//     render() {
-//         return (
-//             <div id="content">
-//                 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-//                     <div className="container-fluid">
-//                         <button className="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-//                             <i className="fas fa-align-justify"></i>
-//                         </button>
-
-//                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-//                             <ul className="nav navbar-nav ml-auto">
-//                                 <li className="nav-item active">
-//                                     <a className="nav-link" href="#">Page</a>
-//                                 </li>
-//                                 <li className="nav-item">
-//                                     <a className="nav-link" href="#">Page</a>
-//                                 </li>
-//                                 <li className="nav-item">
-//                                     <a className="nav-link" href="#">Page</a>
-//                                 </li>
-//                                 <li className="nav-item">
-//                                     <a className="nav-link" href="#">Page</a>
-//                                 </li>
-//                             </ul>
-//                         </div>
-//                     </div>
-//                 </nav>
-//                 <div id="dashboard_content">
-
-//                 </div>
-//             </div>
-//         );
-//     }
-// }
-// export default Content;
-
-
-import React from "react";
-
-const Content = ({ children, noNavbar, noFooter }) => (
-  <div id="content">
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container-fluid">
-            <button className="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <i className="fas fa-align-justify"></i>
-            </button>
-
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="nav navbar-nav ml-auto">
-                    <li className="nav-item active">
-                        <a className="nav-link" href="#">Page</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Page</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Page</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Page</a>
-                    </li>
-                </ul>
+const Content = ({ children, noNavbar, noFooter }) => {
+    const panelRef = React.createRef();
+    return (
+        <div className="contentWrap">
+            <div>
+                <Navbar className="sticky-top-admin navBar" expand="lg">
+                    <Navbar.Collapse className="order-3" id="basic-navbar-nav">
+                        <Nav className="ml-auto">
+                            <Nav.Link className="px-3" href="#Blog">
+                                Blog
+                            </Nav.Link>
+                            <Nav.Link
+                                className="px-3 text-nowrap"
+                                href="/explore-srilanka"
+                            >
+                                Explore SriLanka
+                            </Nav.Link>
+                            <Nav.Link
+                                className="px-3"
+                                href=""
+                                onClick={() => this.modalToggle()}
+                            >
+                                SignIn
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav">
+                        <img src={navIcon} alt="nav icon" />
+                    </Navbar.Toggle>
+                </Navbar>
+            </div>
+            <div id="dashboard_content" className="content">
+                {children}
             </div>
         </div>
-    </nav>
-    <div id="dashboard_content">
-        {children}
-    </div>
-</div>
-);
+    );
+};
 
 export default Content;

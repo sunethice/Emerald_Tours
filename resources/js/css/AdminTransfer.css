@@ -1,0 +1,35 @@
+.opt-col {
+    max-width: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.plusBtn {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    /* opacity: 0.6; */
+    align-items: center;
+    background-color: #012d6b; /*#625df5 - check for later*/
+    color: white;
+}
+
+.plusBtn:hover {
+    color: white;
+}
+
+.plusBtn:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.plusIcon {
+    width: 12px;
+}
+
+.slide-pane {
+    width: 30% !important;
+}

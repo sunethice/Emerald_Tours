@@ -8,6 +8,7 @@ import Content from "./Content";
 import Dashboard from "./Dashboard";
 // import UserProfile from "./UserProfile";
 import Packages from "./Packages";
+import Transfer from "./Transfer";
 import ExploreSL from "./ExploreSL";
 // import Error from "./Error";
 
@@ -34,6 +35,12 @@ export default [
         exact: true,
         layout: Content,
         component: Packages
+    },
+    {
+        path: "/transfers",
+        exact: true,
+        layout: Content,
+        component: Transfer
     },
     {
         path: "/exploresl",
