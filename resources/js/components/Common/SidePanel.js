@@ -3,18 +3,19 @@ import SlidingPane from "react-sliding-pane";
 import "react-sliding-pane/dist/react-sliding-pane.css";
 import "../../css/SidePanel.css";
 
-const SlidePanelHOC = (SliderInnerComponent, pData) => {
+const SlidePanelHOC = (SliderInnerComponent, pData, pIWithAction) => {
     return class extends Component {
         constructor(props) {
             super(props);
             this.state = {
-                Data: pData,
+                data: pData,
+                action: pIWithAction,
                 ...this.props
             };
         }
 
         render() {
-            const { openPanel } = this.state;
+            const { openPanel, data, action } = this.state;
             return (
                 <SlidingPane
                     className="some-custom-class"
@@ -28,7 +29,8 @@ const SlidePanelHOC = (SliderInnerComponent, pData) => {
                     }}
                 >
                     <SliderInnerComponent
-                        data={this.state.Data}
+                        data={data}
+                        action={action}
                         {...this.props}
                     ></SliderInnerComponent>
                 </SlidingPane>

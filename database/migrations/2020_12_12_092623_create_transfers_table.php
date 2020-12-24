@@ -18,6 +18,7 @@ class CreateTransfersTable extends Migration
             $table->string('from');
             $table->string('to');
             $table->string('drivetime');
+            $table->double('charge')->default(0.0);
             $table->timestamps();
         });
     }
