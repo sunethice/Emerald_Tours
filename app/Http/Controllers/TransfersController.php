@@ -23,7 +23,7 @@ class TransfersController extends Controller
         try {
             $transferEntry = Transfers::create($request->input());
             if ($transferEntry) {
-                return response(["message" => "transfer entry added successfully"], 200);
+                return response(["message" => "transfer entry added successfully", "transferEntry" => $transferEntry], 200);
             }
         } catch (QueryException $ex) {
             return response(["message" => $ex->getMessage()], 500);
