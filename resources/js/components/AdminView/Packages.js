@@ -32,7 +32,6 @@ class Package extends Component {
     }
 
     renderPackages() {
-        // console.log(this.props.packages);
         return this.props.packages.map(item => (
             <tr key={item.package_id}>
                 <td>{item.package_id}</td>

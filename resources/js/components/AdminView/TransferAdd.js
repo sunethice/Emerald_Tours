@@ -1,15 +1,15 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import "../../css/AdminTransfer.css";
 import notifyService from "../services/notifyService";
+import { addTransfer } from "../actions/TransferAction";
 // import API from "../../utils/API";
 
 class TransferAdd extends Component {
     constructor(props) {
         super(props);
-        console.log("this.props.action");
-        console.log(this.props.action);
         this.state = {
             transfer_from: this.props.data ? this.props.data.from : "",
             transfer_to: this.props.data ? this.props.data.to : "",
@@ -37,30 +37,31 @@ class TransferAdd extends Component {
         } = this.state;
 
         try {
-            let isTransfered = axios
-                .post("/api/addtransfer", {
-                    from: transfer_from,
-                    to: transfer_to,
-                    drivetime: transfer_time
-                })
-                .then(response => {
-                    if (response.status == 200) {
-                        notifyService.notify(
-                            response.data.message,
-                            notifyService.Notifications.Success
-                        );
-                    } else {
-                        notifyService.notify(
-                            response.data.message,
-                            notifyService.Notifications.Failure
-                        );
-                    }
-                    this.formReset();
-                    console.log(response);
-                })
-                .catch(error => {
-                    console.log(error.response);
-                });
+            this.props.addTransfer(transfer_from, transfer_to, transfer_time);
+            // let isTransfered = axios
+            //     .post("/api/addtransfer", {
+            //         from: transfer_from,
+            //         to: transfer_to,
+            //         drivetime: transfer_time
+            //     })
+            //     .then(response => {
+            //         if (response.status == 200) {
+            //             notifyService.notify(
+            //                 response.data.message,
+            //                 notifyService.Notifications.Success
+            //             );
+            //         } else {
+            //             notifyService.notify(
+            //                 response.data.message,
+            //                 notifyService.Notifications.Failure
+            //             );
+            //         }
+            //         this.formReset();
+            //         console.log(response);
+            //     })
+            //     .catch(error => {
+            //         console.log(error.response);
+            //     });
         } catch (error) {
             console.log(`😱 Axios request failed: ${error}`);
         }
@@ -184,4 +185,14 @@ class TransferAdd extends Component {
     }
 }
 
-export default TransferAdd;
+const mapStateToProps = state => {
+    const { TransferReducer } = state;
+    const { transfers } = TransferReducer;
+    return { transfers };
+};
+
+const mapDispatchToProps = dispatch => ({
+    addTransfer: (pFrom, pTo, pDriveTime) =>
+        dispatch(addTransfer(pFrom, pTo, pDriveTime))
+});
+export default connect(mapStateToProps, mapDispatchToProps)(TransferAdd);

@@ -5,10 +5,6 @@ export const PackageReducer = (state = {}, action) => {
 
     switch(type){
         case LIST_PACKAGES:
-            // const packages = {
-            //     payload
-            // };
-            // return state.concat(newPkgList);
             return {
                 ...state,
                 packages: payload

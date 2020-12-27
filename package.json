@@ -26,6 +26,7 @@
         "react-select": "^3.1.0",
         "react-sliding-pane": "^6.1.2",
         "react-toastify": "^6.1.0",
+        "recompose": "^0.30.0",
         "redux-persist": "^6.0.0",
         "redux-thunk": "^2.3.0"
     },
