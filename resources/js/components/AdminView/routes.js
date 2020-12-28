@@ -8,7 +8,7 @@ import Content from "./Content";
 import Dashboard from "./Dashboard";
 // import UserProfile from "./UserProfile";
 import Packages from "./Packages";
-import Transfer from "./Transfer";
+import Transfer from "./AdminTransfer/Transfer";
 import ExploreSL from "./ExploreSL";
 // import Error from "./Error";
 

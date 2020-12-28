@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import { connect } from "react-redux";
-import "../../css/AdminTransfer.css";
-import SlidePanelHOC from "../Common/SidePanel";
+import "../../../css/AdminTransfer.css";
+import SlidePanelHOC from "../../Common/SidePanel";
 import TransferAdd from "./TransferAdd";
-import { listTransfers } from "../actions/TransferAction";
+import { listTransfers } from "../../actions/TransferAction";
 
 class Transfers extends Component {
     componentDidMount() {
