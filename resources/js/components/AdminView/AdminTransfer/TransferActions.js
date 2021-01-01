@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import "../../../css/AdminTransfer.css";
-import notifyService from "../../services/notifyService";
+import TransferRow from "./TransferRow";
 import { addTransfer } from "../../actions/TransferAction";
-// import API from "../../utils/API";
 
-class TransferAdd extends Component {
+class TransferAction extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -38,30 +35,6 @@ class TransferAdd extends Component {
 
         try {
             this.props.addTransfer(transfer_from, transfer_to, transfer_time);
-            // let isTransfered = axios
-            //     .post("/api/addtransfer", {
-            //         from: transfer_from,
-            //         to: transfer_to,
-            //         drivetime: transfer_time
-            //     })
-            //     .then(response => {
-            //         if (response.status == 200) {
-            //             notifyService.notify(
-            //                 response.data.message,
-            //                 notifyService.Notifications.Success
-            //             );
-            //         } else {
-            //             notifyService.notify(
-            //                 response.data.message,
-            //                 notifyService.Notifications.Failure
-            //             );
-            //         }
-            //         this.formReset();
-            //         console.log(response);
-            //     })
-            //     .catch(error => {
-            //         console.log(error.response);
-            //     });
         } catch (error) {
             console.log(`😱 Axios request failed: ${error}`);
         }
@@ -78,10 +51,10 @@ class TransferAdd extends Component {
 
         const btnClass =
             action == 0
-                ? "btn-warning"
+                ? "btn btn-warning"
                 : action == 1
-                ? "btn-info"
-                : "btn-danger";
+                ? "btn btn-info"
+                : "btn btn-danger";
         const btnText =
             action == 0
                 ? "Save Transfer"
@@ -94,7 +67,7 @@ class TransferAdd extends Component {
                     <div>
                         <form>
                             <div className="form-row mb-3">
-                                <div className="col-md-5">
+                                <div className="col-md-6">
                                     <input
                                         type="text"
                                         value={transfer_from}
@@ -108,18 +81,7 @@ class TransferAdd extends Component {
                                         }
                                     />
                                 </div>
-                                <div className="col-md-2 opt-col">
-                                    <div
-                                        className="plusBtn"
-                                        onClick={() => this.addAFromField()}
-                                    >
-                                        <FontAwesomeIcon
-                                            className="plusIcon"
-                                            icon={faPlus}
-                                        />
-                                    </div>
-                                </div>
-                                <div className="col-md-5">
+                                <div className="col-md-6">
                                     <input
                                         type="text"
                                         value={transfer_to}
@@ -134,7 +96,7 @@ class TransferAdd extends Component {
                                 </div>
                             </div>
                             <div className="form-row mb-3">
-                                <div className="col-md-5">
+                                <div className="col-md-6">
                                     <input
                                         type="text"
                                         value={transfer_time}
@@ -148,8 +110,7 @@ class TransferAdd extends Component {
                                         }
                                     />
                                 </div>
-                                <div className="col-md-2 opt-col"></div>
-                                <div className="col-md-5">
+                                <div className="col-md-6">
                                     <input
                                         type="text"
                                         value={transfer_cost}
@@ -195,4 +156,4 @@ const mapDispatchToProps = dispatch => ({
     addTransfer: (pFrom, pTo, pDriveTime) =>
         dispatch(addTransfer(pFrom, pTo, pDriveTime))
 });
-export default connect(mapStateToProps, mapDispatchToProps)(TransferAdd);
+export default connect(mapStateToProps, mapDispatchToProps)(TransferAction);

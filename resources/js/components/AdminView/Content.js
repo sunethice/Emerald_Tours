@@ -1,10 +1,37 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-scroll";
 import navIcon from "../../img/hamburger.svg";
+import SlidePanelHOC from "../Common/SidePanel";
+
+const ContentWrap = React.forwardRef((props, pRef) => (
+    <div id="dashboard_content" ref={pRef} className="content">
+        {React.cloneElement(props.children, {
+            pRef,
+            sliderfunc: props.sliderfunc
+        })}
+    </div>
+));
 
 const Content = ({ children, noNavbar, noFooter }) => {
-    const panelRef = React.createRef();
+    const panelHolderRef = useRef(null);
+    const [slider, setSlider] = useState(<div></div>);
+
+    const genSlider = (bodyComponent, data, withAction, isPanelOpen) => {
+        setSlider(renderSlider(bodyComponent, data, withAction, isPanelOpen));
+    };
+
+    const renderSlider = (bodyComponent, data, withAction, isPanelOpen) => {
+        const SlidePanel = SlidePanelHOC(bodyComponent, data, withAction);
+        return (
+            <SlidePanel
+                openPanel={isPanelOpen}
+                pTitle="Add Transfer"
+                pSubTitle="add a new transfer to the list"
+            ></SlidePanel>
+        );
+    };
+
     return (
         <div className="contentWrap">
             <div>
@@ -34,9 +61,15 @@ const Content = ({ children, noNavbar, noFooter }) => {
                     </Navbar.Toggle>
                 </Navbar>
             </div>
-            <div id="dashboard_content" className="content">
+            <ContentWrap
+                ref={el => {
+                    panelHolderRef.current = el;
+                }}
+                sliderfunc={genSlider}
+            >
                 {children}
-            </div>
+            </ContentWrap>
+            <div>{slider}</div>
         </div>
     );
 };

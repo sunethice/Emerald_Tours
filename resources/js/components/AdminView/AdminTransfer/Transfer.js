@@ -2,29 +2,13 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import "../../../css/AdminTransfer.css";
-import SlidePanelHOC from "../../Common/SidePanel";
-import TransferAdd from "./TransferAdd";
+import TransferActions from "./TransferActions";
 import { listTransfers } from "../../actions/TransferAction";
 
 class Transfers extends Component {
     componentDidMount() {
         try {
             this.props.fetchTransfers();
-            // let isTransfered = axios
-            //     .get("/api/gettransferlist")
-            //     .then(response => {
-            //         if (response.status == 200) {
-            //             this.setState({ transfers: response.data });
-            //         } else {
-            //             notifyService.notify(
-            //                 response.data.message,
-            //                 notifyService.Notifications.Failure
-            //             );
-            //         }
-            //     })
-            //     .catch(error => {
-            //         console.log(error.response);
-            //     });
         } catch (error) {
             console.log(`😱 Axios request failed: ${error}`);
         }
@@ -33,27 +17,29 @@ class Transfers extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isPanelOpen: false,
             withAction: 0, //0: Create, 1: Edit, 2: Delete
             data: null
         };
     }
 
+    OnCreateClick() {
+        const { data, withAction } = this.state;
+        this.props.sliderfunc(TransferActions, data, withAction, true);
+    }
+
     render() {
-        const { isPanelOpen, data, withAction } = this.state;
-        const SlidePanel = SlidePanelHOC(TransferAdd, data, withAction);
         return (
             <>
                 <div>
                     <div>
                         <button
                             className="btn btn-warning mb-3 float-right"
-                            onClick={() =>
+                            onClick={() => {
                                 this.setState({
-                                    isPanelOpen: true,
                                     withAction: 0
-                                })
-                            }
+                                });
+                                this.OnCreateClick();
+                            }}
                         >
                             Create New
                         </button>
@@ -73,7 +59,6 @@ class Transfers extends Component {
                                     <th>Delete</th>
                                 </tr>
                             </thead>
-
                             <tbody>
                                 {this.props.transfers ? (
                                     this.props.transfers.map(item => (
@@ -90,7 +75,6 @@ class Transfers extends Component {
                                                     className="btn btn-info"
                                                     onClick={() =>
                                                         this.setState({
-                                                            isPanelOpen: true,
                                                             data: item,
                                                             withAction: 1
                                                         })
@@ -104,7 +88,6 @@ class Transfers extends Component {
                                                     className="btn btn-danger"
                                                     onClick={() =>
                                                         this.setState({
-                                                            isPanelOpen: true,
                                                             data: item,
                                                             withAction: 2
                                                         })
@@ -125,11 +108,6 @@ class Transfers extends Component {
                             </tbody>
                         </table>
                     </div>
-                    <SlidePanel
-                        openPanel={isPanelOpen}
-                        pTitle="Add Transfer"
-                        pSubTitle="add a new transfer to the list"
-                    ></SlidePanel>
                 </div>
             </>
         );

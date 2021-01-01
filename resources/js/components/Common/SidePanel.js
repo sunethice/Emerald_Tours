@@ -1,5 +1,4 @@
-import React, { Component, useState } from "react";
-import { pure } from "recompose";
+import React, { Component } from "react";
 import SlidingPane from "react-sliding-pane";
 import "react-sliding-pane/dist/react-sliding-pane.css";
 import "../../css/SidePanel.css";
@@ -24,6 +23,7 @@ const SlidePanelHOC = (SliderInnerComponent, pData, pIWithAction) => {
                     isOpen={openPanel}
                     title={this.props.pTitle}
                     subtitle={this.props.pSubTitle}
+                    shouldCloseOnEsc="true"
                     onRequestClose={() => {
                         // triggered on "<" on left top click or on outside click
                         this.setState({ openPanel: false });
