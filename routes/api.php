@@ -20,6 +20,7 @@ Route::get('packages', 'PackagesController@cpIndex');
 Route::post('bespoke', 'BespokeController@cpStore');
 
 Route::post('addtransfer', 'TransfersController@cpAddTrasfer');
+Route::post('edittransfer', 'TransfersController@cpUpdateTrasfer');
 Route::get('gettransferlist', 'TransfersController@cpGetTransferList');
 Route::group(['prefix' => 'auth', 'middleware' => ['cors', 'json.response']], function () {
     Route::post('signin', 'AuthController@cpSignIn');

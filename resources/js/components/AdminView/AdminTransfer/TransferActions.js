@@ -2,26 +2,28 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "../../../css/AdminTransfer.css";
 import TransferRow from "./TransferRow";
-import { addTransfer } from "../../actions/TransferAction";
+import { addTransfer, editTransfer } from "../../actions/TransferAction";
 
 class TransferAction extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            transfer_id: this.props.data ? this.props.data.id : null,
             transfer_from: this.props.data ? this.props.data.from : "",
             transfer_to: this.props.data ? this.props.data.to : "",
             transfer_time: this.props.data ? this.props.data.drivetime : "",
-            transfer_cost: this.props.data ? this.props.data.charge : 0,
+            transfer_cost: this.props.data ? this.props.data.charge : "",
             action: this.props.action
         };
     }
 
     formReset() {
         this.setState({
+            transfer_id: null,
             transfer_from: "",
             transfer_to: "",
             transfer_time: "",
-            transfer_cost: 0
+            transfer_cost: ""
         });
     }
 
@@ -34,7 +36,33 @@ class TransferAction extends Component {
         } = this.state;
 
         try {
-            this.props.addTransfer(transfer_from, transfer_to, transfer_time);
+            this.props.addTransfer(
+                transfer_from,
+                transfer_to,
+                transfer_time,
+                transfer_cost
+            );
+        } catch (error) {
+            console.log(`😱 Axios request failed: ${error}`);
+        }
+    }
+
+    onEditTransferClick() {
+        const {
+            transfer_id,
+            transfer_from,
+            transfer_to,
+            transfer_time,
+            transfer_cost
+        } = this.state;
+        try {
+            this.props.editTransfer(
+                transfer_id,
+                transfer_from,
+                transfer_to,
+                transfer_time,
+                transfer_cost
+            );
         } catch (error) {
             console.log(`😱 Axios request failed: ${error}`);
         }
@@ -112,7 +140,7 @@ class TransferAction extends Component {
                                 </div>
                                 <div className="col-md-6">
                                     <input
-                                        type="text"
+                                        type="number"
                                         value={transfer_cost}
                                         className="form-control"
                                         placeholder="Cost"
@@ -131,7 +159,11 @@ class TransferAction extends Component {
                                         type="button"
                                         className={btnClass}
                                         onClick={event => {
-                                            this.onAddTransferClick(event);
+                                            action == 0
+                                                ? this.onAddTransferClick(event)
+                                                : this.onEditTransferClick(
+                                                      event
+                                                  );
                                         }}
                                     >
                                         {btnText}
@@ -146,14 +178,10 @@ class TransferAction extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    const { TransferReducer } = state;
-    const { transfers } = TransferReducer;
-    return { transfers };
-};
-
 const mapDispatchToProps = dispatch => ({
-    addTransfer: (pFrom, pTo, pDriveTime) =>
-        dispatch(addTransfer(pFrom, pTo, pDriveTime))
+    addTransfer: (pFrom, pTo, pDriveTime, pCharge) =>
+        dispatch(addTransfer(pFrom, pTo, pDriveTime, pCharge)),
+    editTransfer: (pId, pFrom, pTo, pDriveTime, pCharge) =>
+        dispatch(editTransfer(pId, pFrom, pTo, pDriveTime, pCharge))
 });
-export default connect(mapStateToProps, mapDispatchToProps)(TransferAction);
+export default connect(null, mapDispatchToProps)(TransferAction);

@@ -29,13 +29,14 @@ export function listTransfers() {
     };
 }
 
-export function addTransfer(pFrom, pTo, pDriveTime) {
+export function addTransfer(pFrom, pTo, pDriveTime, pCharge) {
     return dispatch => {
         axios
             .post("/api/addtransfer", {
                 from: pFrom,
                 to: pTo,
-                drivetime: pDriveTime
+                drivetime: pDriveTime,
+                charge: pCharge
             })
             .then(response => {
                 if (response.status == 200) {
@@ -45,6 +46,41 @@ export function addTransfer(pFrom, pTo, pDriveTime) {
                     );
                     dispatch({
                         type: ADD_TRANSFER,
+                        payload: response.data.transferEntry
+                    });
+                } else {
+                    notifyService.notify(
+                        response.data.message,
+                        notifyService.Notifications.Failure
+                    );
+                }
+                // this.formReset();
+                // console.log(response);
+            })
+            .catch(error => {
+                console.log(error.response);
+            });
+    };
+}
+
+export function editTransfer(pId, pFrom, pTo, pDriveTime, pCharge) {
+    return dispatch => {
+        axios
+            .post("/api/edittransfer", {
+                id: pId,
+                from: pFrom,
+                to: pTo,
+                drivetime: pDriveTime,
+                charge: pCharge
+            })
+            .then(response => {
+                if (response.status == 200) {
+                    notifyService.notify(
+                        response.data.message,
+                        notifyService.Notifications.Success
+                    );
+                    dispatch({
+                        type: EDIT_TRANSFER,
                         payload: response.data.transferEntry
                     });
                 } else {

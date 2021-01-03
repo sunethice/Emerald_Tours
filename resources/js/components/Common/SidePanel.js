@@ -23,7 +23,7 @@ const SlidePanelHOC = (SliderInnerComponent, pData, pIWithAction) => {
                     isOpen={openPanel}
                     title={this.props.pTitle}
                     subtitle={this.props.pSubTitle}
-                    shouldCloseOnEsc="true"
+                    shouldCloseOnEsc={true}
                     onRequestClose={() => {
                         // triggered on "<" on left top click or on outside click
                         this.setState({ openPanel: false });

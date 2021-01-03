@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { connect } from "react-redux";
 import "../../../css/AdminTransfer.css";
 import TransferActions from "./TransferActions";
+import TransferRow from "./TransferRow";
 import { listTransfers } from "../../actions/TransferAction";
 
 class Transfers extends Component {
@@ -17,9 +18,15 @@ class Transfers extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            withAction: 0, //0: Create, 1: Edit, 2: Delete
+            withAction: 0, //0: Create, 1: Edit
             data: null
         };
+    }
+    shouldComponentUpdate(nextProps, nextState) {
+        if (this.props.transfers !== nextState.transfers) {
+            return true;
+        }
+        return false;
     }
 
     OnCreateClick() {
@@ -62,41 +69,11 @@ class Transfers extends Component {
                             <tbody>
                                 {this.props.transfers ? (
                                     this.props.transfers.map(item => (
-                                        <tr key={item.id}>
-                                            <td>{item.id}</td>
-                                            <td>{item.from}</td>
-                                            <td>{item.to}</td>
-                                            <td>{item.drivetime}</td>
-                                            <td>{item.charge}</td>
-                                            <td>{item.created_at}</td>
-                                            <td>{item.updated_at}</td>
-                                            <td>
-                                                <button
-                                                    className="btn btn-info"
-                                                    onClick={() =>
-                                                        this.setState({
-                                                            data: item,
-                                                            withAction: 1
-                                                        })
-                                                    }
-                                                >
-                                                    Edit
-                                                </button>
-                                            </td>
-                                            <td>
-                                                <button
-                                                    className="btn btn-danger"
-                                                    onClick={() =>
-                                                        this.setState({
-                                                            data: item,
-                                                            withAction: 2
-                                                        })
-                                                    }
-                                                >
-                                                    Delete
-                                                </button>
-                                            </td>
-                                        </tr>
+                                        <TransferRow
+                                            key={item.id}
+                                            transferItem={item}
+                                            sliderfunc={this.props.sliderfunc}
+                                        ></TransferRow>
                                     ))
                                 ) : (
                                     <tr>
