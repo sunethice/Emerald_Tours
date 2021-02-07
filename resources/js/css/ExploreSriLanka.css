@@ -1,5 +1,5 @@
 .mapContainer {
-    max-width: 960px;
+    /* max-width: 960px; */
     display: flex;
     justify-items: center;
 }
@@ -16,6 +16,10 @@
 .mapWrapper {
     width: 80%;
     height: 80%;
+}
+
+.aboutSL {
+    text-align: justify;
 }
 
 /* "LKA2448": "Mahanuvara",
@@ -46,6 +50,13 @@
 
 svg path:hover {
     fill: #ff0000;
+}
+
+svg path:hover {
+    fill: none;
+    stroke: white;
+    stroke-width: 7px;
+    pointer-events: all;
 }
 
 svg path[id="LKA2448"] {

@@ -9,7 +9,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 const persistConfig = {
     key: "root",
     storage,
-    blacklist: ["AuthReducer"],
+    // blacklist: ["AuthReducer"],
     stateReconciler: autoMergeLevel2 /*say how to reconcile the initial and stored states of our application,
                     as in how deep it should go doing so*/
 };

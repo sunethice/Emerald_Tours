@@ -90,7 +90,60 @@ function ExploreSriLanka() {
                     <div className="row mapRow">
                         <div className="col-12 mapCol">
                             <div className="container">
-                                <h1>Explore Sri Lanka</h1>
+                                <h1 className="text-center mb-3">
+                                    Explore Sri Lanka
+                                </h1>
+                                <p className="aboutSL">
+                                    Sri Lanka is known by many names, Ceylon,
+                                    Thaprobane and well known as the pearl of
+                                    the Indian Ocean. This little island is well
+                                    known around the world for its wonders and
+                                    natural beauty. It's sandy beaches.
+                                    rainforests, wild life, the hill country and
+                                    many more historical and religious sites are
+                                    Of the favorite tourists attractions in Sri
+                                    Lanka. The warm hearted Sri Lankans always
+                                    welcome travelers to explore and experience
+                                    the wonders Of their sacred Island.
+                                    <br /> This paradise isle, Which is shaped
+                                    like a pearl, offers pristine beaches, lush
+                                    tea estates, more waterfalls perhaps than
+                                    any Other country, a staggering 350 that
+                                    cascade dramatically down, rolling hillsides
+                                    and mist-shrouded mountains, and a culture
+                                    that reaches back over 2.500 years. Famous
+                                    for its spices and spice plantations, Sri
+                                    Lanka was described by a renowned botanist.
+                                    as simply one big botanical garden.
+                                    <br />
+                                    dvcnture•seekers and intrepid globetrotters
+                                    looking to blaze new trails in Southeast
+                                    Asia will want to consider adding Sri Lanka
+                                    to their travel bucket list after the
+                                    country claimed the title Of leading
+                                    destination and leading adventure tourism
+                                    destination for Asia. At the World Travel
+                                    Awards Asia and Australasia 2017, Which were
+                                    held in Shanghai, Sri Lanka claimed the
+                                    title Of leading destination for the region,
+                                    an award that reflects the country's range
+                                    of tourism products and services. The
+                                    country was also named the leading adventure
+                                    tourism destination, Sri Lanka has been
+                                    emerging as an interesting travel
+                                    alternative to Thailand, for its beaches,
+                                    Wildlife safaris and adventure tours.
+                                    <br />
+                                    Along With its native land mammals —
+                                    elephants, leopards and Wild buffalos — the
+                                    island and its marine surroundings make the
+                                    destination onc of the best for whale and
+                                    dolphin watching. Sri Lanka is also known
+                                    among thrill•scekers for offering Topnotch
+                                    surfing and diving experiences, jungle
+                                    treks, hikes and elephant•riding and
+                                    rock•climbing adventures.
+                                </p>
                             </div>
                             <svg
                                 className="mapWrapper"
