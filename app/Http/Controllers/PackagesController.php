@@ -3,44 +3,109 @@
 namespace App\Http\Controllers;
 
 use App\Package;
+use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class PackagesController extends Controller
 {
     //
-    public function cpIndex(){
-        // $packages = Package::where('featured', true)->get();
-
-        $packages = Package::with('packageCategory')->get();
-
-        foreach($packages as $key => $value)
-        {
-            $packages[$key]['category_name'] = ($value->packageCategory->name);
+    public function cpIndex()
+    {
+        try {
+            $packageList = Package::get()->all();
+            if ($packageList) {
+                return response()->json($packageList, 200);
+            }
+            return response()->json([], 200);
+        } catch (QueryException $ex) {
+            return response(["message" => $ex->getMessage()], 500);
         }
-        return $packages->toJson();
+        // $packages = Package::where('featured', true)->get();
+        // foreach ($packages as $key => $value) {
+        //     $packages[$key]['category_name'] = ($value->packageCategory->name);
+        // }
     }
 
-    public function cpShow(){
-
+    public function cpShow()
+    {
     }
 
-    public function cpCreate(){
+    public function cpAddPackage(Request $request)
+    {
+        $validate = Validator::make($request->all(), [
+            'name' => 'required|string',
+            'destination' => 'required|string',
+            'description' => 'required|string',
+            'no_of_days' => 'required|int',
+            'no_of_nights' => 'required|int',
+            'featured' => 'required|boolean'
+        ]);
 
+        if ($validate->fails()) {
+            return response(['message' => $validate->failed()], 422);
+        }
+        try {
+            $packageEntry = Package::create($request->input());
+            if ($packageEntry) {
+                return response(["message" => "package entry added successfully", "packageEntry" => $packageEntry], 200);
+            }
+        } catch (QueryException $ex) {
+            return response(["message" => $ex->getMessage()], 500);
+        }
     }
 
-    public function cpStore(){
+    public function cpUpdatePackage(Request $request)
+    {
+        $validate = Validator::make($request->all(), [
+            'package_id' => 'required|int',
+            'name' => 'required|string',
+            'destination' => 'required|string',
+            'description' => 'required|string',
+            'no_of_days' => 'required|int',
+            'no_of_nights' => 'required|int',
+            'featured' => 'required|boolean'
+        ]);
+        if ($validate->fails()) {
+            return response(['message' => $validate->failed()], 422);
+        }
+        try {
+            $packageEntry = Package::where('package_id', $request['package_id'])->first();
 
+            $isUpdated = $packageEntry->update([
+                'name' => $request['name'],
+                'destination' => $request['destination'],
+                'description' => $request['description'],
+                'no_of_days' => $request['no_of_days'],
+                'no_of_nights' => $request['no_of_nights'],
+                'featured' => $request['featured']
+            ]);
+            if ($isUpdated) {
+                $packageUpdated = $packageEntry->refresh();
+                return response(["message" => "package entry updated successfully", "packageEntry" => $packageUpdated], 200);
+            } else {
+                return response(["message" => "package entry could not be updated"], 500);
+            }
+        } catch (QueryException $ex) {
+            return response(["message" => $ex->getMessage()], 500);
+        }
     }
 
-    public function cpEdit(){
 
+
+    public function cpStore()
+    {
     }
 
-    public function cpUpdate(){
-
+    public function cpEdit()
+    {
     }
 
-    public function cpDestroy(){
+    public function cpUpdate()
+    {
+    }
 
+    public function cpDestroy()
+    {
     }
 }

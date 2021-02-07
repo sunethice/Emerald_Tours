@@ -10,6 +10,13 @@ import {
 
 export function listTransfers() {
     return dispatch => {
+        const data = {
+            name: "Client Name",
+            redirect: "http://127.0.0.1:8000/callback",
+            headers: {
+                Accept: "application/json"
+            }
+        };
         axios
             .get("/api/gettransferlist")
             .then(res => {

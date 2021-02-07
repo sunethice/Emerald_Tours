@@ -1,17 +1,20 @@
-import { SIGNIN, SIGNOUT } from '../actions/actionTypes';
+import { SIGNIN, SIGNOUT } from "../actions/actionTypes";
 
 export const AuthReducer = (state = {}, action) => {
     const { type, payload } = action;
 
-    switch(type){
+    switch (type) {
         case SIGNIN:
             return {
                 ...state,
-                packages: payload
+                user: payload
             };
         case SIGNOUT:
-            return state;
+            return {
+                ...state,
+                user: null
+            };
         default:
             return state;
     }
-}
+};

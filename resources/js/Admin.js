@@ -7,8 +7,6 @@ import "./Admin.css";
 import routes from "./components/AdminView/routes";
 
 import Dashboard from "./components/AdminView/Dashboard";
-import Packages from "./components/AdminView/Packages";
-
 
 function handleClick() {
     alert("handleClick");

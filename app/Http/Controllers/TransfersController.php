@@ -69,6 +69,7 @@ class TransfersController extends Controller
             if ($transferList) {
                 return response()->json($transferList, 200);
             }
+            return response()->json([], 200);
         } catch (QueryException $ex) {
             return response(["message" => $ex->getMessage()], 500);
         }

@@ -10,11 +10,11 @@ class PackageCategory extends Model
     use HasFactory;
     protected $table = "package_category";
 
-    public function package(){
-        return $this->hasOne('App\Package');
-    }
+    // public function package(){
+    //     return $this->hasOne('App\Package');
+    // }
 
-    public function packages(){
-        return $this->hasMany('App\Package');
-    }
+    // public function packages(){
+    //     return $this->hasMany('App\Package');
+    // }
 }

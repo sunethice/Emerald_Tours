@@ -3,12 +3,12 @@
     left: -26px;
     display: inline-block;
     padding: 6px 12px;
-    background: rgba(0,0,0,0.15);
+    background: rgba(0, 0, 0, 0.15);
     border-radius: 3px 0 0 3px;
     width: 31.88px;
 }
 
-.btn-label-google{
+.btn-label-google {
     width: 34px;
 }
 
@@ -25,16 +25,121 @@
 }
 
 .btn-auth {
-    margin-bottom:10px;
+    margin-bottom: 10px;
     min-width: 140px;
 }
 
-.btn-facebook{
+.btn-facebook {
     color: #fff;
-    background-color:#3b5998;
+    background-color: #3b5998;
 }
 
-.btn-google{
+.btn-google {
     color: #fff;
-    background-color:#d62d20;
+    background-color: #d62d20;
+}
+
+.react-switch-bg {
+    height: 21px;
+    width: 48px;
+}
+
+.signInColLeft {
+    padding: 65px 95px;
+}
+
+.signInColRight {
+    height: 100%;
+    width: 100%;
+    /* background-color: red; */
+    border-top-right-radius: 47px;
+    border-bottom-right-radius: 47px;
+    padding: 0;
+}
+
+.signinEntry {
+    background-color: transparent;
+    color: #fff;
+}
+
+.signinEntry:focus {
+    background-color: transparent;
+    color: #fff;
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.signUpWrap {
+    color: #fff;
+    font-size: 12px;
+}
+
+.chkKeepSigned {
+    display: inline;
+    width: auto;
+    height: auto;
+    margin-right: 5px;
+}
+
+.forgotPass,
+.signUp {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+.btn-signin {
+    min-width: 150px;
+}
+
+.horizontalLine {
+    display: flex;
+    flex-direction: row;
+    color: #fff;
+    line-height: 11px;
+    font-size: 14px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.horizontalLine:before,
+.horizontalLine:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid #fff;
+    margin: auto;
+}
+
+.signInImg {
+    height: 500px;
+    border-top-right-radius: 47px;
+    border-bottom-right-radius: 47px;
+    width: 100%;
+}
+
+.closeBtn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    right: 20px;
+    top: 20px;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+    opacity: 0.6;
+    align-items: center;
+}
+
+.closeBtn:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.closeIcon {
+    width: 12px;
 }
