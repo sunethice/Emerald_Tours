@@ -40,6 +40,9 @@ class SideBar extends Component {
                                 <Link to="/admin/packages">Packages</Link>
                             </li>
                             <li>
+                                <Link to="/admin/bespoke">Bespoke Inquiry</Link>
+                            </li>
+                            <li>
                                 <Link to="/admin/transfers">Transfers</Link>
                             </li>
                             <li>
