@@ -7,7 +7,8 @@ import Content from "./Content";
 // Route Views
 import Dashboard from "./Dashboard";
 // import UserProfile from "./UserProfile";
-import Packages from "./Packages";
+import Packages from "./AdminPackage/Packages";
+import Bespoke from "./Bespoke";
 import Transfer from "./AdminTransfer/Transfer";
 import ExploreSL from "./ExploreSL";
 // import Error from "./Error";
@@ -35,6 +36,22 @@ export default [
         exact: true,
         layout: Content,
         component: Packages
+    },
+    {
+        path: "/itinerary",
+        layout: Content,
+        component: Packages
+    },
+    {
+        path: "/pkg_attractions",
+        layout: Content,
+        component: Packages
+    },
+    {
+        path: "/bespoke",
+        exact: true,
+        layout: Content,
+        component: Bespoke
     },
     {
         path: "/transfers",

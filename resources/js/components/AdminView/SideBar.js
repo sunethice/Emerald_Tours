@@ -38,12 +38,21 @@ class SideBar extends Component {
                             </li>
                             <li>
                                 <Link to="/admin/packages">Packages</Link>
+                                <ul>
+                                    <Link to="/admin/itinerary">Itinerary</Link>
+                                    <Link to="/admin/pkg_attractions">
+                                        Package attractions
+                                    </Link>
+                                </ul>
                             </li>
                             <li>
                                 <Link to="/admin/bespoke">Bespoke Inquiry</Link>
                             </li>
                             <li>
                                 <Link to="/admin/transfers">Transfers</Link>
+                            </li>
+                            <li>
+                                <Link to="/admin/attractions">Itinerary</Link>
                             </li>
                             <li>
                                 <Link to="/admin/dashboard">Our Team</Link>
