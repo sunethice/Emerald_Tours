@@ -17,7 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('packages', 'PackagesController@cpIndex');
+Route::post('addpackage', 'PackagesController@cpAddPackage');
+Route::post('editpackage', 'PackagesController@cpUpdatePackage');
+
 Route::post('bespoke', 'BespokeController@cpStore');
+Route::get('inquiries', 'BespokeController@cpListBespokeEnquiries');
 
 Route::post('addtransfer', 'TransfersController@cpAddTrasfer');
 Route::post('edittransfer', 'TransfersController@cpUpdateTrasfer');
@@ -29,6 +33,15 @@ Route::group(['prefix' => 'auth', 'middleware' => ['cors', 'json.response']], fu
         Route::get('signout', 'AuthController@cpSignOut');
         Route::get('user', 'AuthController@cpGetUser');
     });
+});
+
+Route::post('admin/signin', 'AuthController@cpAdminSignIn')->name('adminLogin');
+Route::group(['prefix' => 'admin', 'middleware' => ['auth:admin-api', 'scopes:admin']], function () {
+    // authenticated staff routes here
+    Route::get('dashboard', 'AuthController@cpAdminDashboard');
+    // Route::post('addtransfer', 'TransfersController@cpAddTrasfer');
+    // Route::post('edittransfer', 'TransfersController@cpUpdateTrasfer');
+    Route::get('gettransferlist', 'TransfersController@cpGetTransferList');
 });
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
