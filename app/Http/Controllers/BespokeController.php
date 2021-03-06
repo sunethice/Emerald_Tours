@@ -21,13 +21,13 @@ class BespokeController extends Controller
             'message' => 'required|string'
         ]);
 
-        $bespoke = Bespoke::create($request->input());
+        $bespoke = Bespoke::create($request->all());
 
         // dd($request->input('email'));
         //send an email to emerald tours
-        Mail::to($request->input('email'))->send(new BespokeMail($bespoke));
+        Mail::to('suneth_perera@outlook.com')->send(new BespokeMail($bespoke));
         if (!Mail::failures()) {
-            Mail::to($request->input('email'))->send(new BespokeConfirmation($bespoke));
+            Mail::to($request['email'])->send(new BespokeConfirmation($bespoke));
         }
 
         // Mail::send('Html.view', $data, function ($message) {
@@ -64,20 +64,23 @@ class BespokeController extends Controller
         // response(['message' => 'bespoke inquiries listed successfully.', 'result' => $bespokeTours], 200);
     }
 
-    public function cpMarkAsRead(Request $request)
+    public function cpMarkInquiry(Request $request)
     {
         $validate = Validator::make($request->all(), [
-            'id' => 'required'
+            'id' => 'required',
         ]);
 
         if ($validate->fails()) {
-            return response(['message' => 'Bespoke inquire ID required'], 200);
+            return response(['message' => $validate->failed()], 422);
         }
 
-        $bespokeInquiry = Bespoke::where('id', $request['id'])->update(['status' => 2]);
-        if ($bespokeInquiry) {
-            return response(['message' => 'Bespoke inquire marked as read.'], 200);
+        $bespokeInquiry = Bespoke::where('id', $request['id'])->first();
+        $isUpdated = Bespoke::where('id', $request['id'])->update(['status' => ($bespokeInquiry["status"] == 1 ? 2 : 1)]);
+        if ($isUpdated) {
+            $inquiryUpdated = $bespokeInquiry->refresh();
+            return response(["message" => "Bespoke inquiry marked successfully", "inquiryEntry" => $inquiryUpdated], 200);
         }
+        return response(['message' => 'Bespoke inquiry counld not be marked.'], 500);
     }
 
     public function cpMarkAsComplete(Request $request)
