@@ -21,7 +21,7 @@ class SideBar extends Component {
                     </li>
                     <li className="px-3">
                         <a
-                            className="dropdown-toggle menu-collapse p-3"
+                            className="dropdown-toggle menu-collapse"
                             aria-controls="pageSubmenu"
                             aria-expanded={open}
                         >
@@ -50,9 +50,6 @@ class SideBar extends Component {
                             </li>
                             <li>
                                 <Link to="/admin/transfers">Transfers</Link>
-                            </li>
-                            <li>
-                                <Link to="/admin/attractions">Itinerary</Link>
                             </li>
                             <li>
                                 <Link to="/admin/dashboard">Our Team</Link>

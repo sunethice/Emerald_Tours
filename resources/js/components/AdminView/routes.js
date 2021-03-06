@@ -8,9 +8,10 @@ import Content from "./Content";
 import Dashboard from "./Dashboard";
 // import UserProfile from "./UserProfile";
 import Packages from "./AdminPackage/Packages";
-import Bespoke from "./Bespoke";
+import Bespoke from "./AdminBespoke/Bespoke";
 import Transfer from "./AdminTransfer/Transfer";
-import ExploreSL from "./ExploreSL";
+import ExploreSL from "./AdminExploreSL/ExploreSL";
+import Itinerary from "./AdminPackageItinerary/Itinerary";
 // import Error from "./Error";
 
 export default [
@@ -40,7 +41,7 @@ export default [
     {
         path: "/itinerary",
         layout: Content,
-        component: Packages
+        component: Itinerary
     },
     {
         path: "/pkg_attractions",
@@ -61,6 +62,7 @@ export default [
     },
     {
         path: "/exploresl",
+        exact: true,
         layout: Content,
         component: ExploreSL
     }

@@ -17,11 +17,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('packages', 'PackagesController@cpIndex');
+Route::get('packageids', 'PackagesController@cpListPackageIDs');
 Route::post('addpackage', 'PackagesController@cpAddPackage');
 Route::post('editpackage', 'PackagesController@cpUpdatePackage');
 
+Route::get('itineraries', 'ItineraryController@cpIndex');
+Route::post('additinerary', 'ItineraryController@cpAddItinerary');
+Route::post('edititinerary', 'ItineraryController@cpUpdateItinerary');
+
 Route::post('bespoke', 'BespokeController@cpStore');
 Route::get('inquiries', 'BespokeController@cpListBespokeEnquiries');
+Route::post('mark_inquiry', 'BespokeController@cpMarkInquiry');
 
 Route::post('addtransfer', 'TransfersController@cpAddTrasfer');
 Route::post('edittransfer', 'TransfersController@cpUpdateTrasfer');
