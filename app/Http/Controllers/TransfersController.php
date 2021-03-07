@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TransferInqConfirmation;
+use App\Mail\TransferInqMail;
 use App\Transfers;
+use App\TransInquiry;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class TransfersController extends Controller
@@ -73,5 +77,22 @@ class TransfersController extends Controller
         } catch (QueryException $ex) {
             return response(["message" => $ex->getMessage()], 500);
         }
+    }
+
+    public function cpSendTransferInquiry(Request $request)
+    {
+        $this->validate($request, [
+            'clientname' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required|numeric',
+            'message' => 'required|string'
+        ]);
+
+        $transInq = TransInquiry::create($request->all());
+        Mail::to('suneth_perera@outlook.com')->send(new TransferInqMail($transInq));
+        if (!Mail::failures()) {
+            Mail::to($request['email'])->send(new TransferInqConfirmation($transInq));
+        }
+        return response('transfer inquiry sent successfully');
     }
 }
