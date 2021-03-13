@@ -1,0 +1,16 @@
+.pkg-meta-wrap {
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.itinerary-wrap {
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-bottom: 25px;
+}
+
+.itinerary-item {
+    padding-bottom: 50px;
+}

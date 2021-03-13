@@ -46,6 +46,15 @@ class SideBar extends Component {
                                 </ul>
                             </li>
                             <li>
+                                <Link to="/admin/excursions">Excursions</Link>
+                                {/* <ul>
+                                    <Link to="/admin/itinerary">Itinerary</Link>
+                                    <Link to="/admin/pkg_attractions">
+                                        Package attractions
+                                    </Link>
+                                </ul> */}
+                            </li>
+                            <li>
                                 <Link to="/admin/bespoke">Bespoke Inquiry</Link>
                             </li>
                             <li>

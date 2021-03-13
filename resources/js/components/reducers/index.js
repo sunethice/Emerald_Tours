@@ -1,4 +1,5 @@
 import { PackageReducer } from "./PackageReducer";
+import { ExcursionReducer } from "./ExcursionReducer";
 import { TransferReducer } from "./TransferReducer";
 import { AuthReducer } from "./AuthReducer";
 import { BespokeReducer } from "./BespokeReducer";
@@ -8,6 +9,7 @@ import { ItineraryReducer } from "./ItineraryReducer";
 //Australian phisiotherapy association
 export const reducers = {
     PackageReducer,
+    ExcursionReducer,
     TransferReducer,
     AuthReducer,
     BespokeReducer,

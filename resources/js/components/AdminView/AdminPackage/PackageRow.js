@@ -70,14 +70,4 @@ class PackageRow extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    const { PackageReducer } = state;
-    const { packages } = PackageReducer;
-    return { packages };
-};
-
-const mapDispatchToProps = dispatch => ({
-    addPackage: (pFrom, pTo, pDriveTime) =>
-        dispatch(addPackage(pFrom, pTo, pDriveTime))
-});
-export default connect(mapStateToProps, mapDispatchToProps)(PackageRow);
+export default PackageRow;

@@ -24,6 +24,19 @@ class ItineraryController extends Controller
         }
     }
 
+    public function cpIndexByID(Request $request, $id)
+    {
+        try {
+            $itineraryList = Itinerary::where('itinerary_id', $id)->with('package')->get()->all();
+            if ($itineraryList) {
+                return response()->json($itineraryList, 200);
+            }
+            return response()->json([], 200);
+        } catch (QueryException $ex) {
+            return response(["message" => $ex->getMessage()], 500);
+        }
+    }
+
     public function cpAddItinerary(Request $request)
     {
         $validate = Validator::make($request->all(), [

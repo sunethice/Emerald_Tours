@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Header from "./components/ClientView/Header";
 import Footer from "./components/ClientView/Footer";
-import axios from "axios";
-import notifyService from "./components/services/notifyService";
-import "./css/AirportTransfers.css";
-import "./css/App.css";
+import Showcase from "./components/ClientView/Showcase";
 import TrasferDetails from "./components/AirportTransfer/TransferDetails";
 import TransferInquiry from "./components/AirportTransfer/TransferInquiry";
+import "./css/AirportTransfers.css";
+import "./css/App.css";
 
 function AirportTransfer() {
     // const [transferData, setData] = useState([]);
@@ -58,6 +57,7 @@ function AirportTransfer() {
     return (
         <div className="App">
             <Header></Header>
+            <Showcase></Showcase>
             <TransferInquiry></TransferInquiry>
             <TrasferDetails></TrasferDetails>
             <Footer></Footer>

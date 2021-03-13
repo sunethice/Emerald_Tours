@@ -27,6 +27,19 @@ class PackagesController extends Controller
         // }
     }
 
+    public function cpListPackageIDs()
+    {
+        try {
+            $packageList = Package::select('package_id', 'name')->get();
+            if ($packageList) {
+                return response(["packageMeta" => $packageList], 200);
+            }
+            return response()->json([], 200);
+        } catch (QueryException $ex) {
+            return response(["message" => $ex->getMessage()], 500);
+        }
+    }
+
     public function cpShow()
     {
     }
@@ -50,6 +63,7 @@ class PackagesController extends Controller
             if ($packageEntry) {
                 return response(["message" => "package entry added successfully", "packageEntry" => $packageEntry], 200);
             }
+            return response(["message" => "package could not be added."], 500);
         } catch (QueryException $ex) {
             return response(["message" => $ex->getMessage()], 500);
         }
@@ -91,21 +105,17 @@ class PackagesController extends Controller
         }
     }
 
-
-
-    public function cpStore()
+    public function cpGetPackageWithItinerary(Request $request, $packageId)
     {
-    }
+        try {
+            $packageEntry = Package::where('package_id', $packageId)->with('itineraries')->get();
 
-    public function cpEdit()
-    {
-    }
-
-    public function cpUpdate()
-    {
-    }
-
-    public function cpDestroy()
-    {
+            if ($packageEntry) {
+                return response(["message" => "package retrieved successfully", "packageEntry" => $packageEntry], 200);
+            }
+            return response(["message" => "package could not be retrieved."], 500);
+        } catch (QueryException $ex) {
+            return response(["message" => $ex->getMessage()], 500);
+        }
     }
 }

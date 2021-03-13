@@ -1,5 +1,6 @@
 import {
     LIST_PACKAGES,
+    LIST_PACKAGE_IDS,
     LIST_PACKAGES_FAILURE,
     ADD_PACKAGE,
     EDIT_PACKAGE,
@@ -14,6 +15,11 @@ export const PackageReducer = (state = {}, action) => {
             return {
                 ...state,
                 packages: payload
+            };
+        case LIST_PACKAGE_IDS:
+            return {
+                ...state,
+                packageMeta: payload
             };
         case LIST_PACKAGES_FAILURE:
             return state;

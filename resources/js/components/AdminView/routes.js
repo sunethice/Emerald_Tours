@@ -8,6 +8,7 @@ import Content from "./Content";
 import Dashboard from "./Dashboard";
 // import UserProfile from "./UserProfile";
 import Packages from "./AdminPackage/Packages";
+import Excursions from "./AdminExcursion/Excursions";
 import Bespoke from "./AdminBespoke/Bespoke";
 import Transfer from "./AdminTransfer/Transfer";
 import ExploreSL from "./AdminExploreSL/ExploreSL";
@@ -37,6 +38,12 @@ export default [
         exact: true,
         layout: Content,
         component: Packages
+    },
+    {
+        path: "/excursions",
+        exact: true,
+        layout: Content,
+        component: Excursions
     },
     {
         path: "/itinerary",

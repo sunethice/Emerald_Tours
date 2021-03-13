@@ -69,7 +69,7 @@ class TransfersController extends Controller
     public function cpGetTransferList(Request $request)
     {
         try {
-            $transferList = Transfers::get()->all();
+            $transferList = Transfers::orderBy('from', 'ASC')->get()->all();
             if ($transferList) {
                 return response()->json($transferList, 200);
             }

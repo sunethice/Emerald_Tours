@@ -1,8 +1,5 @@
 <?php
 
-use App\Http\Controllers\PackagesController;
-use App\Http\Controllers\TransfersController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,10 +17,17 @@ Route::get('packages', 'PackagesController@cpIndex');
 Route::get('packageids', 'PackagesController@cpListPackageIDs');
 Route::post('addpackage', 'PackagesController@cpAddPackage');
 Route::post('editpackage', 'PackagesController@cpUpdatePackage');
+Route::get('packagewithitinerary/{packageId}', 'PackagesController@cpGetPackageWithItinerary');
 
 Route::get('itineraries', 'ItineraryController@cpIndex');
+Route::get('itineraries/{id}', 'ItineraryController@cpIndexByID');
 Route::post('additinerary', 'ItineraryController@cpAddItinerary');
 Route::post('edititinerary', 'ItineraryController@cpUpdateItinerary');
+
+Route::get('excursions', 'ExcursionsController@cpIndex');
+Route::get('excursionids', 'ExcursionsController@cpListExcursionIDs');
+Route::post('addexcursion', 'ExcursionsController@cpAddExcursion');
+Route::post('editexcursion', 'ExcursionsController@cpUpdateExcursion');
 
 Route::post('bespoke', 'BespokeController@cpStore');
 Route::get('inquiries', 'BespokeController@cpListBespokeEnquiries');
@@ -32,6 +36,7 @@ Route::post('mark_inquiry', 'BespokeController@cpMarkInquiry');
 Route::post('addtransfer', 'TransfersController@cpAddTrasfer');
 Route::post('edittransfer', 'TransfersController@cpUpdateTrasfer');
 Route::get('gettransferlist', 'TransfersController@cpGetTransferList');
+Route::post('transferinquiry', 'TransfersController@cpSendTransferInquiry');
 Route::group(['prefix' => 'auth', 'middleware' => ['cors', 'json.response']], function () {
     Route::post('signin', 'AuthController@cpSignIn');
     Route::post('signup', 'AuthController@cpSignUp');
