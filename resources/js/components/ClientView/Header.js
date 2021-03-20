@@ -4,25 +4,23 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Link, animateScroll as scroll } from "react-scroll";
 import SignIn from "../Common/SignIn";
 import { Modal, Container, Row, Col } from "react-bootstrap";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
-import '../../css/Header.css';
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import "../../css/Header.css";
 
 class Header extends Component {
-
     constructor() {
         super();
-		this.state = {
-			show: false,
-		};
-	}
+        this.state = {
+            show: false
+        };
+    }
 
-	modalToggle() {
-		this.setState({ show: !this.state.show });
-	}
-//
-/*
+    modalToggle() {
+        this.setState({ show: !this.state.show });
+    }
+    //
+    /*
 https://api.instagram.com/oauth/authorize
   ?client_id=3395292697205627
   &redirect_uri=https://emeraldtours.co/
@@ -79,7 +77,7 @@ https://api.instagram.com/oauth/authorize
                             <Nav.Link
                                 as={Link}
                                 className="px-3 text-white"
-                                href="#"
+                                // href=""
                                 to="gallery_wrap"
                                 smooth="true"
                                 duration={1000}
@@ -88,7 +86,7 @@ https://api.instagram.com/oauth/authorize
                             </Nav.Link>
                             <Nav.Link
                                 className="px-3 text-white"
-                                href="#Excursions"
+                                href="https://emeraldtours.co/#Excursions"
                             >
                                 Excursions
                             </Nav.Link>
@@ -98,7 +96,7 @@ https://api.instagram.com/oauth/authorize
                         <img
                             className="d-block mx-lg-auto"
                             style={{ width: "30%" }}
-                            src={process.env.MIX_PUBLIC_IMAGE_URL + 'logo1.png'}
+                            src={process.env.MIX_PUBLIC_IMAGE_URL + "logo1.png"}
                             href="#"
                             alt="Emerald Tours"
                         ></img>
@@ -114,7 +112,11 @@ https://api.instagram.com/oauth/authorize
                             >
                                 Explore SriLanka
                             </Nav.Link>
-                            <Nav.Link className="px-3 text-white" href="" onClick={() => this.modalToggle()}>
+                            <Nav.Link
+                                className="px-3 text-white"
+                                href=""
+                                onClick={() => this.modalToggle()}
+                            >
                                 SignIn
                             </Nav.Link>
                             <Nav.Link className="btn inquire-btn px-3 text-black text-nowrap">
@@ -126,23 +128,44 @@ https://api.instagram.com/oauth/authorize
                         <img src={navIcon} alt="nav icon" />
                     </Navbar.Toggle>
                 </Navbar>
-                <Modal className="AuthModal no-gutters" show={this.state.show} onHide={() => this.modalToggle()} centered>
-					<Modal.Body className="no-gutters">
+                <Modal
+                    className="AuthModal no-gutters"
+                    show={this.state.show}
+                    onHide={() => this.modalToggle()}
+                    centered
+                >
+                    <Modal.Body className="no-gutters">
                         <Container className="no-gutters">
                             <Row>
                                 <Col xs={12} md={6} className="signInColLeft">
-                                    <SignIn/>
+                                    <SignIn />
                                 </Col>
-                                <Col xs={6} md={6} className="signInColRight d-sm-none d-md-block">
-                                    <div className="closeBtn" onClick={() => this.modalToggle()}>
-                                        <FontAwesomeIcon className="closeIcon" icon={faTimes} />
+                                <Col
+                                    xs={6}
+                                    md={6}
+                                    className="signInColRight d-sm-none d-md-block"
+                                >
+                                    <div
+                                        className="closeBtn"
+                                        onClick={() => this.modalToggle()}
+                                    >
+                                        <FontAwesomeIcon
+                                            className="closeIcon"
+                                            icon={faTimes}
+                                        />
                                     </div>
-                                    <img src={ process.env.MIX_PUBLIC_URL + `/images/SL_img004.jpg`} className="signInImg"></img>
+                                    <img
+                                        src={
+                                            process.env.MIX_PUBLIC_URL +
+                                            `/images/SL_img004.jpg`
+                                        }
+                                        className="signInImg"
+                                    ></img>
                                 </Col>
                             </Row>
                         </Container>
                     </Modal.Body>
-				</Modal>
+                </Modal>
             </>
         );
     }

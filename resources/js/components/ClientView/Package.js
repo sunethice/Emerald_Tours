@@ -193,14 +193,9 @@ class Package extends Component {
 }
 
 const mapStateToProps = state => {
-    const {
-        PackageReducer
-        // AuthReducer: {
-        //     user: { access_token }
-        // }
-    } = state;
+    const { PackageReducer } = state;
     const { packages } = PackageReducer;
-    return { packages }; //, access_token };
+    return { packages };
 };
 
 const mapDispatchToProps = dispatch => ({

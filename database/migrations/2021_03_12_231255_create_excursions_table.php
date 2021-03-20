@@ -17,6 +17,7 @@ class CreateExcursionsTable extends Migration
             $table->increments('excursion_id');
             $table->string('name');
             $table->text('description');
+            $table->string('primaryimg')->nullable();
             $table->timestamps();
         });
     }
